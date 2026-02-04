@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2026 limou</copyright>
-    <lastBuildDate>Tue, 06 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Android开发</title>
+      <link>//localhost:1313/categories/android%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/categories/android%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>前端</title>
@@ -15,16 +25,6 @@
       <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
       
       <guid>//localhost:1313/categories/%E5%89%8D%E7%AB%AF/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Android开发</title>
-      <link>//localhost:1313/categories/android%E5%BC%80%E5%8F%91/</link>
-      <pubDate>Sat, 25 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/categories/android%E5%BC%80%E5%8F%91/</guid>
       <description></description>
       
     </item>

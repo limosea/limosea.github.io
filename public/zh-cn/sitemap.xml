@@ -3,8 +3,20 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>//localhost:1313/categories/android%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2026-01-28T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>//localhost:1313/tags/android%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2026-01-28T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>//localhost:1313/categories/</loc>
-    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-28T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -20,7 +32,7 @@
   </url>
   <url>
     <loc>//localhost:1313/</loc>
-    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-28T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -35,8 +47,14 @@
     />
   </url>
   <url>
+    <loc>//localhost:1313/tags/react-native/</loc>
+    <lastmod>2026-01-28T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>//localhost:1313/tags/</loc>
-    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-28T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -52,7 +70,13 @@
   </url>
   <url>
     <loc>//localhost:1313/tutorial/</loc>
-    <lastmod>2026-01-06T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-28T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>//localhost:1313/tutorial/2026/01/use-tailwind-in-react-native/</loc>
+    <lastmod>2026-01-28T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -71,18 +95,6 @@
   <url>
     <loc>//localhost:1313/tutorial/2026/01/post-shield-script/</loc>
     <lastmod>2026-01-06T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>//localhost:1313/categories/android%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2022-06-25T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>//localhost:1313/tags/android%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2022-06-25T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

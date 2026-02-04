@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2026 limou</copyright>
-    <lastBuildDate>Tue, 06 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>在React Native中使用Tailwind CSS</title>
+      <link>//localhost:1313/tutorial/2026/01/use-tailwind-in-react-native/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/tutorial/2026/01/use-tailwind-in-react-native/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;在React Native中使用Tailwind CSS&#xA;    &lt;div id=&#34;在react-native中使用tailwind-css&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e5%9c%a8react-native%e4%b8%ad%e4%bd%bf%e7%94%a8tailwind-css&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Tailwind CSS是一个用于构建用户界面的 CSS 框架，但该框架仅适用于Web端，在RN中，由于RD的设计模式，无法直接使用，需要一些折腾，本文介绍使用&lt;strong&gt;NativeWind&lt;/strong&gt;来解决这个问题。&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>写个脚本屏蔽搜索引擎中的垃圾网站oryoy.com</title>
