@@ -1,0 +1,7 @@
+{{/*
+  tab shortcode - 单个标签面板
+  用法: {{< tab "标题" >}}内容{{< /tab >}}
+*/}}
+<div class="code-tab-panel{{ if ne .Parent nil }}{{ else }} hidden{{ end }}">
+  {{ .Inner }}
+</div>

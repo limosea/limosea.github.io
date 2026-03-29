@@ -1,0 +1,43 @@
+{{/*
+  codetabs shortcode - 多标签代码块
+  用法:
+  {{< codetabs >}}
+  ---JavaScript---
+  ```js
+  console.log('hello');
+  ```
+  ---Python---
+  ```python
+  print('hello')
+  ```
+  {{< /codetabs >}}
+*/}}
+{{ $content := .Inner }}
+{{ $parts := split $content "---" }}
+{{ $titles := slice }}
+{{ $bodies := slice }}
+{{ $i := 0 }}
+{{ range $parts }}
+  {{ $trimmed := trim . "\n\r " }}
+  {{ if ne $trimmed "" }}
+    {{ if eq (mod $i 2) 0 }}
+      {{ $titles = $titles | append $trimmed }}
+    {{ else }}
+      {{ $bodies = $bodies | append $trimmed }}
+    {{ end }}
+    {{ $i = add $i 1 }}
+  {{ end }}
+{{ end }}
+
+<div class="code-tabs">
+  <div class="code-tabs-header">
+    {{ range $idx, $title := $titles }}
+      <button class="code-tab-btn{{ if eq $idx 0 }} active{{ end }}" type="button">{{ $title }}</button>
+    {{ end }}
+  </div>
+  {{ range $idx, $body := $bodies }}
+    <div class="code-tab-panel{{ if ne $idx 0 }} hidden{{ end }}">
+      {{ $body | markdownify }}
+    </div>
+  {{ end }}
+</div>

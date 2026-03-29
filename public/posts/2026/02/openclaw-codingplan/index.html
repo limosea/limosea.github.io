@@ -1,0 +1,2291 @@
+<!doctype html>
+<html
+  lang="zh-cn"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      如何选择AI编程套餐？ | Limou&#39;s Site
+    </title>
+    <meta
+      name="description"
+      content=""
+    />
+    <link rel="preconnect" href="https://fonts.loli.net" />
+    <link
+      href="https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Noto Sans SC", "system-ui", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <style>
+       
+
+       
+      [data-theme="strawberry-matcha"] {
+        --card-bg: #d5e8d6;
+        --card-text: #9b1550;
+        --tag-bg: #b8dab9;
+        --tag-text: #7a0d3f;
+        --cat-bg: #d63d6e;
+        --cat-text: #ffffff;
+        --fluid-1: rgba(248, 187, 208, 0.9);
+        --fluid-2: rgba(185, 218, 185, 0.9);
+        --fluid-3: rgba(244, 143, 177, 0.9);
+        --fluid-4: rgba(213, 232, 214, 0.9);
+        --fluid-5: rgba(165, 214, 167, 0.9);
+      }
+      html.dark [data-theme="strawberry-matcha"] {
+        --card-bg: #1a2e1c;
+        --card-text: #f0a0c0;
+        --tag-bg: #243e28;
+        --tag-text: #e8a0b8;
+        --cat-bg: #e06090;
+        --cat-text: #121a14;
+      }
+
+       
+      [data-theme="matcha-strawberry"] {
+        --card-bg: #f2d0da;
+        --card-text: #166520;
+        --tag-bg: #e8b8c8;
+        --tag-text: #1a5e24;
+        --cat-bg: #3a9040;
+        --cat-text: #ffffff;
+        --fluid-1: rgba(165, 214, 167, 0.9);
+        --fluid-2: rgba(232, 184, 200, 0.9);
+        --fluid-3: rgba(129, 199, 132, 0.9);
+        --fluid-4: rgba(242, 208, 218, 0.9);
+        --fluid-5: rgba(248, 187, 208, 0.9);
+      }
+      html.dark [data-theme="matcha-strawberry"] {
+        --card-bg: #321820;
+        --card-text: #90c898;
+        --tag-bg: #402028;
+        --tag-text: #80b888;
+        --cat-bg: #58a860;
+        --cat-text: #1a0e12;
+      }
+
+       
+      [data-theme="taro-mango"] {
+        --card-bg: #f5e0b8;
+        --card-text: #6a1a90;
+        --tag-bg: #e8d0a0;
+        --tag-text: #5a1480;
+        --cat-bg: #9a40a8;
+        --cat-text: #ffffff;
+        --fluid-1: rgba(206, 147, 216, 0.9);
+        --fluid-2: rgba(232, 208, 160, 0.9);
+        --fluid-3: rgba(186, 104, 200, 0.9);
+        --fluid-4: rgba(245, 224, 184, 0.9);
+        --fluid-5: rgba(255, 204, 128, 0.9);
+      }
+      html.dark [data-theme="taro-mango"] {
+        --card-bg: #2e1e0c;
+        --card-text: #c890d8;
+        --tag-bg: #3a2810;
+        --tag-text: #b880c8;
+        --cat-bg: #b860c8;
+        --cat-text: #181008;
+      }
+
+       
+      [data-theme="mango-taro"] {
+        --card-bg: #e4c8e8;
+        --card-text: #c84500;
+        --tag-bg: #d8b8e0;
+        --tag-text: #b83e00;
+        --cat-bg: #e07000;
+        --cat-text: #ffffff;
+        --fluid-1: rgba(255, 204, 128, 0.9);
+        --fluid-2: rgba(216, 184, 224, 0.9);
+        --fluid-3: rgba(255, 167, 38, 0.9);
+        --fluid-4: rgba(228, 200, 232, 0.9);
+        --fluid-5: rgba(206, 147, 216, 0.9);
+      }
+      html.dark [data-theme="mango-taro"] {
+        --card-bg: #241428;
+        --card-text: #f0b860;
+        --tag-bg: #2e1a32;
+        --tag-text: #e0a850;
+        --cat-bg: #f09030;
+        --cat-text: #140c18;
+      }
+
+       
+      [data-theme="blueberry-peach"] {
+        --card-bg: #f0d4cc;
+        --card-text: #1055a8;
+        --tag-bg: #e8c4b8;
+        --tag-text: #0c4898;
+        --cat-bg: #1878d0;
+        --cat-text: #ffffff;
+        --fluid-1: rgba(144, 202, 249, 0.9);
+        --fluid-2: rgba(232, 196, 184, 0.9);
+        --fluid-3: rgba(66, 165, 245, 0.9);
+        --fluid-4: rgba(240, 212, 204, 0.9);
+        --fluid-5: rgba(255, 171, 145, 0.9);
+      }
+      html.dark [data-theme="blueberry-peach"] {
+        --card-bg: #261812;
+        --card-text: #78b0e8;
+        --tag-bg: #302018;
+        --tag-text: #68a0d8;
+        --cat-bg: #4098e0;
+        --cat-text: #140e0a;
+      }
+
+       
+      [data-theme="peach-blueberry"] {
+        --card-bg: #c8daee;
+        --card-text: #a83008;
+        --tag-bg: #b8cce0;
+        --tag-text: #982808;
+        --cat-bg: #e04818;
+        --cat-text: #ffffff;
+        --fluid-1: rgba(255, 171, 145, 0.9);
+        --fluid-2: rgba(184, 204, 224, 0.9);
+        --fluid-3: rgba(255, 138, 101, 0.9);
+        --fluid-4: rgba(200, 218, 238, 0.9);
+        --fluid-5: rgba(144, 202, 249, 0.9);
+      }
+      html.dark [data-theme="peach-blueberry"] {
+        --card-bg: #121c28;
+        --card-text: #f09070;
+        --tag-bg: #182430;
+        --tag-text: #e08060;
+        --cat-bg: #f07040;
+        --cat-text: #0a0e14;
+      }
+
+       
+      :root {
+        --glass-bg: rgba(255, 255, 255, 0.55);
+        --glass-border: rgba(255, 255, 255, 0.45);
+        --glass-shadow: rgba(0, 0, 0, 0.06);
+        --page-text: #4a3f47;
+        --page-text-muted: #8a7f87;
+      }
+      html.dark {
+        --glass-bg: rgba(20, 15, 30, 0.82);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --glass-shadow: rgba(0, 0, 0, 0.35);
+        --page-text: #e8e0e4;
+        --page-text-muted: #a89fa5;
+      }
+
+       
+      .liquid-bg {
+        position: fixed;
+        inset: 0;
+        z-index: -20;
+        overflow: hidden;
+        background: linear-gradient(
+          135deg,
+          #fdf6f0 0%,
+          #f0f7f4 50%,
+          #f6f0fa 100%
+        );
+      }
+      html.dark .liquid-bg {
+        background: linear-gradient(
+          135deg,
+          #12101a 0%,
+          #0e1510 50%,
+          #14101e 100%
+        );
+      }
+      .liquid-blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(90px);
+        animation: blobMove 20s ease-in-out infinite alternate;
+      }
+      .liquid-blob:nth-child(1) {
+        width: 550px;
+        height: 550px;
+        background: var(--fluid-1);
+        top: -10%;
+        left: -5%;
+        animation-duration: 22s;
+        opacity: 0.6;
+      }
+      .liquid-blob:nth-child(2) {
+        width: 450px;
+        height: 450px;
+        background: var(--fluid-2);
+        top: 55%;
+        left: 68%;
+        animation-duration: 18s;
+        animation-delay: -5s;
+        opacity: 0.55;
+      }
+      .liquid-blob:nth-child(3) {
+        width: 500px;
+        height: 500px;
+        background: var(--fluid-3);
+        top: 28%;
+        left: 38%;
+        animation-duration: 25s;
+        animation-delay: -10s;
+        opacity: 0.5;
+      }
+      .liquid-blob:nth-child(4) {
+        width: 380px;
+        height: 380px;
+        background: var(--fluid-4);
+        top: 68%;
+        left: 8%;
+        animation-duration: 20s;
+        animation-delay: -3s;
+        opacity: 0.6;
+      }
+      .liquid-blob:nth-child(5) {
+        width: 420px;
+        height: 420px;
+        background: var(--fluid-5);
+        top: 8%;
+        left: 72%;
+        animation-duration: 23s;
+        animation-delay: -8s;
+        opacity: 0.5;
+      }
+      html.dark .liquid-blob {
+        opacity: 0.35;
+      }
+      @keyframes blobMove {
+        0% {
+          transform: translate(0, 0) scale(1);
+        }
+        33% {
+          transform: translate(90px, 70px) scale(1.15);
+        }
+        66% {
+          transform: translate(-50px, 130px) scale(0.9);
+        }
+        100% {
+          transform: translate(-70px, 30px) scale(1.05);
+        }
+      }
+
+       
+      .frosted-glass {
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px) saturate(1.8);
+        -webkit-backdrop-filter: blur(20px) saturate(1.8);
+        border: 1px solid var(--glass-border);
+        box-shadow: 0 8px 32px var(--glass-shadow);
+      }
+       
+      #nav-dropdown {
+        background: #f8f5f0 !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+      }
+      html.dark #nav-dropdown {
+        background: #1e1828 !important;
+      }
+
+       
+      .macaron-card {
+        background: var(--card-bg);
+        color: var(--card-text);
+        border-radius: 1.25rem;
+        padding: 1.5rem;
+        box-shadow:
+          0 2px 12px rgba(0, 0, 0, 0.06),
+          0 1px 4px rgba(0, 0, 0, 0.04);
+        transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .macaron-card:hover {
+        transform: translateY(-6px);
+        box-shadow:
+          0 12px 36px rgba(0, 0, 0, 0.1),
+          0 4px 12px rgba(0, 0, 0, 0.06);
+      }
+      html.dark .macaron-card {
+        box-shadow:
+          0 2px 12px rgba(0, 0, 0, 0.25),
+          0 1px 4px rgba(0, 0, 0, 0.15);
+      }
+      html.dark .macaron-card:hover {
+        box-shadow:
+          0 12px 36px rgba(0, 0, 0, 0.35),
+          0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+       
+      .article-card-static {
+        transition: none !important;
+      }
+      .article-card-static:hover {
+        transform: none !important;
+        box-shadow:
+          0 2px 12px rgba(0, 0, 0, 0.06),
+          0 1px 4px rgba(0, 0, 0, 0.04) !important;
+      }
+      html.dark .article-card-static:hover {
+        box-shadow:
+          0 2px 12px rgba(0, 0, 0, 0.25),
+          0 1px 4px rgba(0, 0, 0, 0.15) !important;
+      }
+      html.dark .bottom-nav .text-page-muted {
+        color: #3a3035;
+      }
+      html.dark .bottom-nav:hover {
+        box-shadow:
+          0 2px 12px rgba(0, 0, 0, 0.25),
+          0 1px 4px rgba(0, 0, 0, 0.15) !important;
+      }
+
+       
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.2rem 0.65rem;
+        border-radius: 1rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        background: var(--tag-bg);
+        color: var(--tag-text);
+        transition: transform 0.2s;
+      }
+      .tag:hover {
+        transform: scale(1.08);
+      }
+
+       
+      .category-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.5rem;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        background: var(--cat-bg);
+        color: var(--cat-text);
+      }
+
+       
+      .macaron-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        background: var(--glass-bg);
+        backdrop-filter: blur(24px) saturate(1.6);
+        -webkit-backdrop-filter: blur(24px) saturate(1.6);
+        border-bottom: 1px solid var(--glass-border);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .macaron-header.header-hidden {
+        transform: translateY(-100%);
+      }
+      .macaron-header.header-shadow {
+        box-shadow: 0 4px 20px var(--glass-shadow);
+      }
+
+       
+      .theme-picker {
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        z-index: 100;
+      }
+      .theme-picker-btn {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          #f48fb1,
+          #81c784,
+          #ba68c8,
+          #ffb74d,
+          #64b5f6
+        );
+        border: 3px solid var(--glass-bg);
+        box-shadow: 0 4px 20px var(--glass-shadow);
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .theme-picker-btn:hover {
+        transform: scale(1.1) rotate(15deg);
+      }
+      .theme-picker-panel {
+        position: absolute;
+        bottom: 60px;
+        right: 0;
+        background: var(--glass-bg);
+        backdrop-filter: blur(24px);
+        border: 1px solid var(--glass-border);
+        border-radius: 1rem;
+        padding: 1rem;
+        min-width: 220px;
+        box-shadow: 0 8px 32px var(--glass-shadow);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s;
+      }
+      .theme-picker-panel.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .theme-picker-title {
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 0.5rem;
+        color: var(--page-text-muted);
+      }
+      .theme-option {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: var(--page-text);
+      }
+      .theme-option:hover {
+        background: rgba(0, 0, 0, 0.06);
+      }
+      html.dark .theme-option:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .theme-option.active {
+        background: rgba(0, 0, 0, 0.08);
+        font-weight: 700;
+      }
+      html.dark .theme-option.active {
+        background: rgba(255, 255, 255, 0.15);
+      }
+      .theme-dot {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 2px solid var(--glass-border);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+      }
+
+       
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--cat-bg, #f48fb1);
+        border-radius: 3px;
+      }
+
+       
+      .line-clamp-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .text-accent {
+        color: var(--cat-bg);
+      }
+      .bg-accent {
+        background-color: var(--cat-bg);
+      }
+      .text-page {
+        color: var(--page-text);
+      }
+      .text-page-muted {
+        color: var(--page-text-muted);
+      }
+
+       
+      #search-wrapper {
+        z-index: 999;
+      }
+      #search-modal {
+        background: var(--glass-bg);
+        backdrop-filter: blur(24px);
+        border-color: var(--glass-border);
+      }
+
+       
+      .scroll-top-btn {
+        position: fixed;
+        bottom: 1.5rem;
+        left: 1.5rem;
+        z-index: 90;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: var(--glass-bg);
+        backdrop-filter: blur(16px);
+        border: 1.5px solid rgba(0, 0, 0, 0.12);
+        box-shadow: 0 4px 16px var(--glass-shadow);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+      }
+      .scroll-top-btn.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .scroll-top-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px var(--glass-shadow);
+      }
+
+       
+      .article-body {
+        color: #3a3035;
+      }
+      .article-body .article-content {
+        line-height: 1.8;
+        font-size: 0.95rem;
+      }
+      .article-body .article-content h1,
+      .article-body .article-content h2,
+      .article-body .article-content h3,
+      .article-body .article-content h4 {
+        color: #2a2025;
+        font-weight: 700;
+        margin-top: 1.8em;
+        margin-bottom: 0.6em;
+      }
+      html.dark .article-body,
+      html.dark .article-body .article-content h1,
+      html.dark .article-body .article-content h2,
+      html.dark .article-body .article-content h3,
+      html.dark .article-body .article-content h4,
+      html.dark .article-body .article-content p,
+      html.dark .article-body .article-content strong,
+      html.dark .article-body .article-content em,
+      html.dark .article-body .article-content li,
+      html.dark .article-body .article-content td,
+      html.dark .article-body .article-content th {
+        color: #2a2025;
+      }
+      .article-body .article-content h1 {
+        font-size: 1.6rem;
+      }
+      .article-body .article-content h2 {
+        font-size: 1.35rem;
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      .article-body .article-content h3 {
+        font-size: 1.15rem;
+      }
+      .article-body .article-content p {
+        margin-bottom: 1em;
+        color: #3a3035;
+      }
+      .article-body .article-content a {
+        color: var(--cat-bg) !important;
+        text-decoration: none;
+        font-weight: 500;
+        border-bottom: 1px solid transparent;
+        transition: all 0.2s;
+      }
+      .article-body .article-content a:hover {
+        border-bottom-color: var(--cat-bg);
+      }
+      .article-body .article-content strong {
+        color: #2a2025;
+      }
+      .article-body .article-content em {
+        color: #3a3035;
+      }
+      .article-body .article-content blockquote {
+        border-left: 3px solid var(--cat-bg);
+        margin: 1.2em 0;
+        padding: 0.6em 1em;
+        background: rgba(0, 0, 0, 0.04);
+        border-radius: 0 0.75rem 0.75rem 0;
+        color: #5a5055;
+        font-style: normal;
+      }
+      html.dark .article-body .article-content blockquote {
+        background: rgba(0, 0, 0, 0.08);
+      }
+      .article-body .article-content code {
+        background: var(--tag-bg);
+        color: var(--tag-text) !important;
+        padding: 0.15em 0.4em;
+        border-radius: 0.35rem;
+        font-size: 0.88em;
+        font-family: "JetBrains Mono", monospace;
+      }
+      .article-body .article-content pre {
+        background: #2d2a33;
+        color: #e8e0f0 !important;
+        border-radius: 0.75rem;
+        padding: 1.2rem;
+        margin: 1.2em 0;
+        overflow-x: auto;
+        font-size: 0.85rem;
+        line-height: 1.6;
+        position: relative;
+      }
+      html.dark .article-body .article-content pre {
+        background: #1a1820;
+      }
+      .article-body .article-content pre code {
+        background: none;
+        padding: 0;
+        color: inherit !important;
+      }
+      .article-body .article-content ul,
+      .article-body .article-content ol {
+        padding-left: 1.5em;
+        margin-bottom: 1em;
+      }
+      .article-body .article-content li {
+        margin-bottom: 0.3em;
+        color: #3a3035;
+      }
+      .article-body .article-content img {
+        border-radius: 0.75rem;
+        margin: 1em auto;
+        max-width: 100%;
+      }
+      .article-body .article-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.2em 0;
+        font-size: 0.9rem;
+      }
+      .article-body .article-content th,
+      .article-body .article-content td {
+        padding: 0.6em 1em;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        color: #3a3035;
+      }
+      .article-body .article-content th {
+        background: rgba(0, 0, 0, 0.04);
+        font-weight: 600;
+      }
+      .article-body .article-content hr {
+        border: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        margin: 2em 0;
+      }
+       
+      .article-body .article-content h1 .anchor,
+      .article-body .article-content h2 .anchor,
+      .article-body .article-content h3 .anchor,
+      .article-body .article-content h4 .anchor {
+        color: var(--cat-bg) !important;
+        opacity: 0;
+        margin-left: 0.3em;
+        text-decoration: none;
+        transition: opacity 0.2s;
+      }
+      .article-body .article-content h1:hover .anchor,
+      .article-body .article-content h2:hover .anchor,
+      .article-body .article-content h3:hover .anchor,
+      .article-body .article-content h4:hover .anchor {
+        opacity: 1;
+      }
+      .article-body .article-content :not(pre) > code {
+        background: var(--tag-bg);
+        color: var(--tag-text) !important;
+      }
+
+       
+      html.dark .article-card-static {
+        color: #3a3035;
+      }
+      html.dark .article-card-static .text-page {
+        color: #2a2025 !important;
+      }
+      html.dark .article-card-static .text-page-muted {
+        color: #5a5055 !important;
+      }
+      html.dark .article-card-static .category-badge {
+        color: #fff !important;
+      }
+      html.dark .article-card-static time {
+        color: #5a5055 !important;
+      }
+      html.dark .article-card-static .tag {
+        color: var(--tag-text) !important;
+      }
+
+       
+      .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+      }
+      .pagination a,
+      .pagination span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 2.2rem;
+        height: 2.2rem;
+        padding: 0 0.6rem;
+        border-radius: 0.5rem;
+        font-size: 0.85rem;
+        transition: all 0.2s;
+      }
+      .pagination a {
+        background: var(--card-bg);
+        color: #5a5055;
+        text-decoration: none;
+      }
+      .pagination a:hover {
+        color: var(--cat-bg);
+      }
+      .pagination .active span,
+      .pagination span.current {
+        background: var(--cat-bg);
+        color: #fff !important;
+        font-weight: 600;
+        border-radius: 0.5rem;
+      }
+      html.dark .pagination a {
+        color: #5a5055;
+      }
+      html.dark .pagination a:hover {
+        color: #2a2025;
+      }
+      html.dark .pagination .active span,
+      html.dark .pagination span.current {
+        color: #fff !important;
+      }
+
+       
+      .code-copy-btn {
+        position: absolute;
+        top: 0.6rem;
+        right: 0.6rem;
+        padding: 0.25rem 0.6rem;
+        border-radius: 0.35rem;
+        font-size: 0.72rem;
+        font-weight: 500;
+        background: rgba(255, 255, 255, 0.12);
+        color: rgba(255, 255, 255, 0.6);
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s;
+        z-index: 2;
+      }
+      .code-copy-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .code-copy-btn.copied {
+        background: var(--cat-bg);
+        color: #fff;
+      }
+
+       
+      .macaron-toc-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .macaron-toc-nav li {
+        margin-bottom: 0.15rem;
+      }
+      .macaron-toc-nav ul ul {
+        padding-left: 0.8rem;
+        margin-top: 0.15rem;
+      }
+      .macaron-toc-nav a {
+        display: block;
+        padding: 0.3rem 0.5rem;
+        border-radius: 0.35rem;
+        color: #5a5055 !important;
+        font-size: 0.82rem;
+        text-decoration: none;
+        transition: all 0.2s;
+        border-left: 2px solid transparent;
+      }
+      html.dark .macaron-toc-nav a {
+        color: #4a4045 !important;
+      }
+      .macaron-toc-nav a:hover {
+        color: #2a2025 !important;
+        background: rgba(0, 0, 0, 0.06);
+      }
+      html.dark .macaron-toc-nav a:hover {
+        color: #1a1015 !important;
+        background: rgba(0, 0, 0, 0.08);
+      }
+      .macaron-toc-nav a.active {
+        color: var(--cat-bg) !important;
+        border-left-color: var(--cat-bg);
+        font-weight: 600;
+      }
+       
+      .macaron-toc-nav nav {
+        border: none !important;
+        padding: 0 !important;
+      }
+      .macaron-toc-nav #TableOfContents {
+        border: none !important;
+        padding: 0 !important;
+      }
+      .macaron-toc-nav #TableOfContents > ul {
+        padding: 0 !important;
+      }
+
+       
+      .toc-sidebar {
+        width: 14rem;
+        transition: width 0.3s ease;
+      }
+      .toc-sidebar.toc-sidebar-collapsed {
+        width: 2rem;
+      }
+       
+      .toc-mini-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .toc-mini-bars {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 8px 0;
+      }
+       
+      .toc-mini-item {
+        flex: 1;
+        display: flex;
+        width: 30px;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+      }
+      .toc-mini-item:hover .toc-mini-bar {
+        width: 20px;
+        height: 7px;
+        background: var(--cat-bg);
+      }
+      .toc-mini-item.active .toc-mini-bar {
+        width: 20px;
+        height: 7px;
+        background: var(--cat-bg);
+      }
+      .toc-mini-bar {
+        width: 14px;
+        height: 5px;
+        border-radius: 2.5px;
+        background: var(--card-bg);
+        transition: all 0.2s;
+      }
+       
+      .toc-mini-tip {
+        position: absolute;
+        left: 22px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: var(--card-bg);
+        color: var(--card-text);
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 180px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: all 0.15s;
+        z-index: 10;
+      }
+      .toc-mini-item:hover .toc-mini-tip {
+        opacity: 1;
+        visibility: visible;
+      }
+      html.dark .toc-mini-bar {
+        background: #3a3045;
+      }
+      html.dark .toc-mini-tip {
+        color: #2a2025;
+      }
+
+       
+      .code-tabs {
+        margin: 1.2em 0;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        background: #2d2a33;
+      }
+      html.dark .code-tabs {
+        background: #1a1820;
+      }
+      .code-tabs-header {
+        display: flex;
+        gap: 0;
+        background: rgba(0, 0, 0, 0.15);
+        overflow-x: auto;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .code-tab-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.5);
+        border: none;
+        background: none;
+        white-space: nowrap;
+        border-bottom: 2px solid transparent;
+        transition: all 0.2s;
+      }
+      .code-tab-btn:hover {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .code-tab-btn.active {
+        color: var(--cat-bg);
+        border-bottom-color: var(--cat-bg);
+      }
+      .code-tab-panel pre {
+        margin: 0;
+        border-radius: 0;
+      }
+      .code-tab-panel.hidden {
+        display: none;
+      }
+    </style>
+    <meta charset="utf-8">
+
+  <meta http-equiv="content-language" content="zh-cn">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="theme-color" content="#fdf6f0">
+
+
+  <title>如何选择AI编程套餐？ · Limou&#39;s Site</title>
+  <meta name="title" content="如何选择AI编程套餐？ · Limou&#39;s Site">
+
+
+
+
+  <meta name="keywords" content="AI,AI编程,Coding Plan,">
+
+<link rel="canonical" href="//localhost:1313/posts/2026/02/openclaw-codingplan/">
+
+
+
+  <meta name="author" content="limou">
+
+
+<meta property="og:url" content="//localhost:1313/posts/2026/02/openclaw-codingplan/">
+<meta property="og:site_name" content="Limou&#39;s Site">
+<meta property="og:title" content="如何选择AI编程套餐？">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何选择AI编程套餐？">
+
+
+  <link rel="icon" href="favicon.svg">
+
+
+
+
+  </head>
+
+  <body
+    class="min-h-screen flex flex-col"
+    style="
+      font-family: &quot;Noto Sans SC&quot;, system-ui, sans-serif;
+      color: var(--page-text);
+    "
+  >
+    
+    <div class="liquid-bg">
+      <div class="liquid-blob"></div>
+      <div class="liquid-blob"></div>
+      <div class="liquid-blob"></div>
+      <div class="liquid-blob"></div>
+      <div class="liquid-blob"></div>
+    </div>
+
+    <header class="macaron-header w-full">
+  <div class="mx-auto max-w-5xl px-4">
+    <div class="flex items-center justify-between h-14">
+      
+      <div class="flex items-center gap-3">
+        
+          
+          
+            <a href="/" class="flex items-center gap-2">
+              <img src="/img/logo-64x64.png" class="h-8 w-8 rounded-lg object-cover" alt="Limou&#39;s Site">
+            </a>
+          
+        
+        <a href="/" class="text-base font-bold text-accent hover:opacity-80 transition-opacity">
+          Limou&rsquo;s Site
+        </a>
+      </div>
+      
+      
+      <nav class="hidden md:flex items-center gap-1">
+        
+          <a href="/posts/" 
+             
+             class="px-3 py-1.5 rounded-lg text-sm font-medium transition-all hover:bg-black/5 dark:hover:bg-white/10 text-accent">
+            博客
+          </a>
+        
+          <a href="/tutorial/" 
+             
+             class="px-3 py-1.5 rounded-lg text-sm font-medium transition-all hover:bg-black/5 dark:hover:bg-white/10 text-accent">
+            教程
+          </a>
+        
+          <a href="" 
+             
+             class="px-3 py-1.5 rounded-lg text-sm font-medium transition-all hover:bg-black/5 dark:hover:bg-white/10 text-accent">
+            <blockquote></blockquote>
+          </a>
+        
+        
+        
+        <div class="relative" id="nav-dropdown-wrap">
+          <button type="button" id="nav-dropdown-btn"
+                  class="p-1.5 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition-all cursor-pointer text-accent"
+                  aria-label="更多导航">
+            <svg class="h-4 w-4 transition-transform duration-200" id="nav-dropdown-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div id="nav-dropdown" class="hidden absolute right-0 top-full mt-2 w-44 frosted-glass rounded-xl py-2 shadow-lg z-50">
+            <a href="/categories/" class="flex items-center gap-2 px-4 py-2.5 text-sm text-page hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+              <span class="text-accent">&#9672;</span>文章分类
+            </a>
+            <a href="/tags/" class="flex items-center gap-2 px-4 py-2.5 text-sm text-page hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+              <span class="text-accent">&#9830;</span>文章标签
+            </a>
+            <a href="/about/" class="flex items-center gap-2 px-4 py-2.5 text-sm text-page hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+              <span class="text-accent">&#9829;</span>关于
+            </a>
+          </div>
+        </div>
+        
+        
+        <button type="button" id="appearance-switcher" 
+                class="p-1.5 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition-all cursor-pointer text-accent" 
+                aria-label="切换亮暗模式">
+          <svg class="h-[18px] w-[18px] dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+          <svg class="h-[18px] w-[18px] hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+        </button>
+        
+        
+        
+          <button type="button" id="search-button" 
+                  class="p-1.5 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition-all cursor-pointer text-accent" 
+                  aria-label="搜索">
+            <svg class="h-[18px] w-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </button>
+        
+      </nav>
+      
+      
+      <div class="flex items-center gap-0.5 md:hidden">
+        
+        
+          <button type="button" id="search-button-mobile" 
+                  class="p-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition-all cursor-pointer text-accent" 
+                  aria-label="搜索">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </button>
+        
+        
+        <button type="button" id="appearance-switcher-mobile" 
+                class="p-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition-all cursor-pointer text-accent" 
+                aria-label="切换亮暗模式">
+          <svg class="h-5 w-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+          <svg class="h-5 w-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+        </button>
+        
+        <button type="button" id="mobile-menu-toggle" 
+                class="p-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition-all cursor-pointer text-accent" 
+                aria-label="菜单">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div id="mobile-menu" class="hidden md:hidden frosted-glass border-t" style="border-color:var(--glass-border)">
+    <div class="px-4 py-3 space-y-0.5">
+      
+        <a href="/posts/" 
+           
+           class="block py-2.5 px-4 rounded-xl text-page text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10 transition-all">
+          博客
+        </a>
+      
+        <a href="/tutorial/" 
+           
+           class="block py-2.5 px-4 rounded-xl text-page text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10 transition-all">
+          教程
+        </a>
+      
+        <a href="" 
+           
+           class="block py-2.5 px-4 rounded-xl text-page text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10 transition-all">
+          <blockquote></blockquote>
+        </a>
+      
+      <div class="border-t my-2" style="border-color:var(--glass-border)"></div>
+      <a href="/categories/" class="flex items-center gap-2 py-2.5 px-4 rounded-xl text-page text-sm hover:bg-black/5 dark:hover:bg-white/10 transition-all">
+        <span class="text-accent">&#9672;</span>文章分类
+      </a>
+      <a href="/tags/" class="flex items-center gap-2 py-2.5 px-4 rounded-xl text-page text-sm hover:bg-black/5 dark:hover:bg-white/10 transition-all">
+        <span class="text-accent">&#9830;</span>文章标签
+      </a>
+      <a href="/about/" class="flex items-center gap-2 py-2.5 px-4 rounded-xl text-page text-sm hover:bg-black/5 dark:hover:bg-white/10 transition-all">
+        <span class="text-accent">&#9829;</span>关于
+      </a>
+    </div>
+  </div>
+</header>
+
+    <div class="h-14"></div>
+
+    <main class="flex-grow">
+<article class="mx-auto max-w-6xl px-4 py-8">
+  <div class="flex flex-col lg:flex-row gap-6" id="article-layout">
+    
+    
+    
+    
+    
+    
+    <aside class="hidden lg:block flex-shrink-0 order-first toc-sidebar" id="toc-sidebar">
+      <div class="sticky top-20">
+        
+        <div id="toc-drawer-full" class="macaron-card article-card-static p-4">
+          <div class="flex items-center justify-between mb-3">
+            <div class="text-xs font-bold text-accent uppercase tracking-wider">目录</div>
+            <button type="button" id="toc-collapse-btn" 
+                    class="text-accent hover:opacity-70 transition-opacity cursor-pointer" aria-label="收起目录">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/>
+              </svg>
+            </button>
+          </div>
+          <nav class="macaron-toc-nav" id="toc-full-nav">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#计费模式解析">计费模式解析</a></li>
+    <li><a href="#分类表格">分类表格</a></li>
+    <li><a href="#推荐">推荐</a></li>
+  </ul>
+</nav>
+          </nav>
+        </div>
+        
+        <div id="toc-drawer-mini" class="hidden toc-mini-wrap">
+          <button type="button" id="toc-expand-btn" 
+                  class="mb-2 text-accent hover:opacity-70 transition-opacity cursor-pointer" aria-label="展开目录">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7"/>
+            </svg>
+          </button>
+          <div id="toc-mini-bars" class="toc-mini-bars"></div>
+        </div>
+      </div>
+    </aside>
+    
+
+    
+    <div class="flex-grow min-w-0" id="article-main-content">
+      
+      
+      <div class="lg:hidden macaron-card article-card-static mb-6">
+        <button type="button" id="mobile-toc-toggle" 
+                class="w-full flex items-center justify-between text-sm font-bold text-accent cursor-pointer">
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7"/>
+            </svg>
+            目录
+          </span>
+          <svg class="w-4 h-4 transition-transform" id="mobile-toc-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div id="mobile-toc-content" class="hidden mt-3 pt-3 border-t" style="border-color:var(--glass-border)">
+          <nav class="macaron-toc-nav">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#计费模式解析">计费模式解析</a></li>
+    <li><a href="#分类表格">分类表格</a></li>
+    <li><a href="#推荐">推荐</a></li>
+  </ul>
+</nav>
+          </nav>
+        </div>
+      </div>
+      
+
+      
+      <div class="macaron-card article-card-static mb-6">
+        
+        <div class="flex flex-wrap items-center gap-2 mb-4 text-xs">
+          
+            
+              
+              <a href="//localhost:1313/categories/ai/" 
+                 class="category-badge">AI</a>
+            
+          
+        </div>
+        
+        
+        
+        <nav class="flex flex-wrap items-center gap-1.5 mb-4 text-xs text-page-muted">
+          <a href="/" class="hover:text-accent transition-colors">首页</a>
+          
+          
+          
+            
+              
+              <span class="mx-0.5">/</span>
+              <a href="//localhost:1313/posts" class="hover:text-accent transition-colors">
+                文章
+              </a>
+            
+          
+          <span class="mx-0.5">/</span>
+          <span class="text-page">如何选择AI编程套餐？</span>
+        </nav>
+        
+
+        
+        <h1 class="text-2xl sm:text-3xl font-bold text-page leading-tight mb-4">
+          如何选择AI编程套餐？
+        </h1>
+
+        
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-page-muted mb-4">
+          
+            <time datetime="2026-03-28" class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              2026年03月28日
+            </time>
+          
+          
+          
+            <span class="flex items-center gap-1">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              8 分钟
+            </span>
+          
+        </div>
+
+        
+        
+          <div class="flex flex-wrap gap-1.5">
+            
+              
+              <a href="//localhost:1313/tags/ai/" class="tag">#AI</a>
+            
+              
+              <a href="//localhost:1313/tags/ai%E7%BC%96%E7%A8%8B/" class="tag">#AI编程</a>
+            
+              
+              <a href="//localhost:1313/tags/coding-plan/" class="tag">#Coding Plan</a>
+            
+          </div>
+        
+      </div>
+
+      
+      <div class="macaron-card article-card-static article-body mb-8">
+        <div class="article-content prose max-w-none">
+          
+<h1 class="relative group">如何选择AI编程套餐？
+    <div id="如何选择ai编程套餐" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a6%82%e4%bd%95%e9%80%89%e6%8b%a9ai%e7%bc%96%e7%a8%8b%e5%a5%97%e9%a4%90" aria-label="锚点">#</a>
+    </span>
+    
+</h1>
+<p>主要按计费模式详细介绍一下，尽量用最直观的方式表达。</p>
+
+<h2 class="relative group">计费模式解析
+    <div id="计费模式解析" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%ae%a1%e8%b4%b9%e6%a8%a1%e5%bc%8f%e8%a7%a3%e6%9e%90" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<ol>
+<li><strong>请求数模式</strong></li>
+</ol>
+<p>这种是云厂商搞的模式。</p>
+<ul>
+<li>模型请求：<strong>每次思考、每一次连续的输入/输出、每次工具调用、每次命令执行&hellip;&hellip;</strong>，都是模型请求的结果。</li>
+<li>每次对话可能要进行很多次请求。</li>
+<li>计费方式比token令人安心，不管你每次请求消耗了多少token，100个token和1亿个token都只计费一次。</li>
+</ul>
+<p><strong>优点</strong>：计费粒度适中，既不会因任务过于复杂而消耗巨量token，也不会因为任务过于简单而一下就消耗了一次Prompt而觉得可惜。</p>
+<p><strong>缺点</strong>：如果你每次处理的都是非常复杂、长时间自动运行的任务，可能消耗比较快。但据我实际使用来看，这种时候很少。</p>
+<ol start="2">
+<li><strong>Prompt模式</strong></li>
+</ol>
+<p>这种是国内模型厂商搞的模式，国外的Claude也搞。</p>
+<ul>
+<li>
+<p>一次Prompt：输入框输入提示词，一个回车敲过去，直到它正常停止输出。</p>
+</li>
+<li>
+<p>不计算其间消耗的token数和模型调用的次数。</p>
+</li>
+<li>
+<p>一般有5小时滑动窗口：5小时内最多只能发送一定的消息数，还会有周限额。</p>
+</li>
+</ul>
+<p><strong>优点</strong>：一个长时间自动运行的任务，无论运行多久、输出多少东西，都只消耗一次Prompt。</p>
+<p><strong>缺点</strong>：屁大点事都要消耗一次，比如你跟它说：帮我关机！消耗一次！</p>
+<ol start="3">
+<li><strong>积分单次定额模式</strong></li>
+</ol>
+<p>这种模式现在只有Copilot在搞了。</p>
+<ul>
+<li>
+<p>“定额”是指不会随输出变长而消耗变多。</p>
+</li>
+<li>
+<p>这里的请求数和上面说的不是一个概念，上面：模型请求；这里：可以当作一种积分。</p>
+</li>
+<li>
+<p>每月定量请求数。</p>
+</li>
+<li>
+<p>每次与AI对话消耗固定的积分/请求数，不计算token。</p>
+</li>
+<li>
+<p>不同模型扣除的额度不同，但不会随输出变长而消耗变多。</p>
+</li>
+</ul>
+<p><strong>优点</strong>：兼顾高级模型的能力和低级模型的经济，同时还能消除token焦虑。</p>
+<p><strong>缺点</strong>：Copilot的Agent能力还是远不如AI IDE。</p>
+<p>这种模式和Prompt模式差不多，但有区别：<strong>Prompt每次给AI发消息只固定消耗1次请求数， 积分单次定额模式会根据模型不同而扣除不同积分/请求数</strong>，例如给Claude Opus 4.6发一条消息可能需要消耗3个请求数，而给GPT-Codex可能只需1个请求数。</p>
+<ol start="4">
+<li><strong>积分/美元单次按token计费模式</strong></li>
+</ol>
+<p>这是用的最多的模式，Cursor、Trae、CodeBuddy、Qoder、Claude Code（有两种计费模式）、Kiro、Augment Code都在用。</p>
+<ul>
+<li>与定额模式的区别：不定额，输入输出越长，消耗积分/美元越多。</li>
+<li>积分和美元的区别：积分也是用美元兑的，它们与token一级我们口袋里的钱钱都是直接线性相关，换一种代币罢了。</li>
+</ul>
+<p><strong>优点</strong>：没有优点，跟直接消耗token差不多。除非像Kiro这样，每次扣的特别少，但Kiro很容易封号（不过可以薅500积分，能爽几天是几天）。</p>
+<p><strong>缺点</strong>：全是缺点。</p>
+<ol start="5">
+<li><strong>积分/请求数日限量模式</strong></li>
+</ol>
+<p>现在使用这种模式的有windsurf（积分称为quota）、Gemini和GPT Codex（每日消息数根据使用的模型和输入输出决定）。</p>
+<ul>
+<li>每日刷新限额，周额度也有限制。</li>
+<li>每次对话根据输入输出token计算数计算额度。</li>
+<li>日额度不得超过上限。</li>
+<li>使用高级模型-&gt;能用的次数少，使用低级模型-&gt;能多用几次。</li>
+</ul>
+<p><strong>优点</strong>：不会一下子用完。</p>
+<p><strong>缺点</strong>：你想在某天用它解决顽固bug，可能搞一半就限额了，等明天，甚至等下周，非常恶心，尤其时windsurf。GPT给的额度够到还行，但windsurf是真的狗，它之前是<strong>积分单次定额模式</strong>的，3月19日改了。</p>
+
+<h2 class="relative group">分类表格
+    <div id="分类表格" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%88%86%e7%b1%bb%e8%a1%a8%e6%a0%bc" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>我做了一个表格，这可以看得更直观：</p>
+<table>
+  <thead>
+      <tr>
+          <th>计费模式</th>
+          <th>原理</th>
+          <th>适用场景</th>
+          <th>代表厂商</th>
+          <th>价格</th>
+          <th>额度</th>
+          <th>模型</th>
+          <th>备注</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>请求数模式</td>
+          <td>将每次模型调用作为计数单位，<strong>无需关注每次调用消耗多少token</strong></td>
+          <td>零散的<strong>编码</strong>需求、<strong>OpenClaw</strong></td>
+          <td>阿里云</td>
+          <td>Pro：¥200/月；Lite：¥40/月</td>
+          <td>Pro：1200次/5小时。<strong>大多数很耐用，火山除外</strong></td>
+          <td>GLM，Kimi，MiniMax ，Qwen最新开源模型</td>
+          <td>稳定，除非上下文特别长才会卡</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>腾讯云</td>
+          <td></td>
+          <td></td>
+          <td>GLM，Kimi，MiniMax，混元最新开源模型</td>
+          <td>抢不到，模型少，速度从反馈来看还不错</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>百度智能云</td>
+          <td></td>
+          <td></td>
+          <td>GLM，Kimi，MiniMax，DeepSeek最新开源模型</td>
+          <td>模型少，速度从反馈来看还不错，<strong>唯一不敢推自家模型的</strong></td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>火山引擎</td>
+          <td></td>
+          <td></td>
+          <td>GLM，Kimi，MiniMax，DeepSeek，豆包最新开源模型</td>
+          <td>速度慢，超售严重，算力跟不上</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>京东云</td>
+          <td></td>
+          <td></td>
+          <td>GLM，Kimi，MiniMax最新开源模型，Qwen3-Coder</td>
+          <td>前期算力不足，经常请求RPM限制，基本用不了</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>MiniMax</td>
+          <td>¥29/49/119/月三档，包年有优惠</td>
+          <td>Starter：600次/5小时；Plus：1500次/5小时；Max：4500次/5小时。周限额没明确说。<strong>很耐用</strong></td>
+          <td>MiniMax最新模型</td>
+          <td>原本是Prompt模式，国内最差模型</td>
+      </tr>
+      <tr>
+          <td>Prompt模式</td>
+          <td>人类发送给AI的一条消息算一个Prompt，<strong>无需关注其间有几次模型请求或多少token消耗</strong></td>
+          <td>一个提示词就描述清楚的<strong>复杂任务</strong></td>
+          <td>智谱</td>
+          <td>¥49/149/469/月三档</td>
+          <td>Lite：约80 Prompt/5小时，400Prompt/周；Pro：约 400 Prompt/5小时，2000 Prompt/周；Max：约1600 Prompt/5小时，8000 Prompt/周。<strong>很耐用</strong></td>
+          <td>GLM最新模型</td>
+          <td>抢不到，算力仍然不足</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Claude</td>
+          <td>Pro：$20/月；Max 5x：$100/月;Max 20x：¥200/月</td>
+          <td>Pro：约45 消息/5小时，300 消息/周；Max 5x：约225消息/5小时，1500消息/周。<strong>比较耐用</strong>。</td>
+          <td>Claude Opus、Sonnet、Haiku最新模型</td>
+          <td>公然反华，但确实好用，国内直接开他家基本不可能</td>
+      </tr>
+      <tr>
+          <td>积分单次定额模式</td>
+          <td>每次给AI发消息，<strong>根据使用的模型扣除固定额度，不计算token数</strong></td>
+          <td></td>
+          <td>Copilot</td>
+          <td>Pro：$10/月；Pro+：$39/月</td>
+          <td>Pro：300请求数（相当于积分）/月；Pro+：1500请求数。<strong>比较耐用</strong>。</td>
+          <td>Claude、Gemini、GPT、Grok最新模型和Raptor（GitHub自研专用模型）</td>
+          <td>Copilot的Agent能力不是很好（很不好），不过它有些上古免费模型可以用</td>
+      </tr>
+      <tr>
+          <td>积分/美元单次按token计费模式</td>
+          <td>用钱买积分，或直接花钱，消耗积分/钱与token直接相关，<strong>输入输出越多，消耗越多</strong></td>
+          <td></td>
+          <td>Trae</td>
+          <td>国际版$10/30/100/月，国内版不推荐（国内模型还按token计费）</td>
+          <td>Trae：扣美元，$10可买$20额度，$30可买70额度，$100可买$400额度，按token扣钱，<strong>不耐用</strong>。</td>
+          <td>Gemini和GPT的最新模型，不支持Claude，国内版仅支持国内模型，<strong>不推荐付费</strong>。不支持国外的模型，但实际上肯定偷摸用了。</td>
+          <td>这三个差不多，Trae直接花美元，其它是积分。</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Qoder</td>
+          <td>$10/30/100/月，不分国内国际</td>
+          <td>2000/6000/20000积分/月，<strong>不耐用</strong></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>CodeBuddy</td>
+          <td>国际个人版仅一个档位$19.9/月</td>
+          <td>1000积分，<strong>不耐用</strong></td>
+          <td>Gemini和GPT的最新模型，国内版仅支持国内模型，<strong>不推荐付费</strong>。</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Cursor</td>
+          <td>$20/60/200/月</td>
+          <td>与trae类似，按月付费后获得$20/70/400，然后按原API的token价格计费，直接扣钱，<strong>消耗很快</strong>。自研Composer模型对付费用户<strong>不限额</strong>。</td>
+          <td>GPT、Claude、Gemini、Grok、Kimi最新模型。外加“字”研的Composer模型</td>
+          <td>贵，直接花token。但是Agent能力超强。</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Kiro</td>
+          <td>$20/40/200/月</td>
+          <td>1000/2000/10000积分/月，<strong>比较耐用</strong>。新用户白嫖500积分（免费用户最多能用Sonnet 4.5）。一次普通Opus 4.6任务约花费5积分。</td>
+          <td>Claude最新模型，外加DeepSeek、MiniMax、Qwen-Coder-Next</td>
+          <td>积分比较耐用，新用户白嫖500积分，但免费用户最多只能用Claude Sonnet 4.5，还很容易封号。</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Augment Code</td>
+          <td>$20/60/200/月</td>
+          <td>40000/130000/450000积分每月，一次普通Opus 4.6任务约花费500积分。<strong>不耐用</strong></td>
+          <td>Claude最新模型，GPT部分最新模型</td>
+          <td>Agent能力也很好，能跟Cursor碰，但积分也是不耐用，跟直接花钱差不多</td>
+      </tr>
+      <tr>
+          <td>积分/请求数日限量模式</td>
+          <td>每日限总请求数/积分，这个值它可能明说，也可能只显示百分比，根据<strong>使用模型不同、输入输出长短不同，扣除不同额度</strong>。</td>
+          <td></td>
+          <td>WindSurf</td>
+          <td>$20/200/月</td>
+          <td>每日刷新限额，但没有明确额度，$20的套餐用Opus 4.6，每日只能对话约10次。<strong>不好用</strong></td>
+          <td>很全面，国外模型：SWE（Codeium自研模型，很一般），GPT、Claude、Gemini、Grok最新模型。国内模型：MiniMax、Kimi、GLM最新开源模型</td>
+          <td>不当人了，改了计费方式，丐版15刀涨到20刀，月限额改成日限额和周限额，每天只能和Claude对话七八次。</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Google Gemini（包含Code Assist）</td>
+          <td>¥7.99/19.99/249.99/月</td>
+          <td>30次/100次/500次/天旗舰模型+90次/300次/1500次/天Thinking模型。还附带Nano Banana图片、视频生成、Google Drive等权益。<strong>丐版不够用</strong></td>
+          <td>Gemini最新模型</td>
+          <td>对国内查得严，非常容易封号。付款难。</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>chatGPT（包含Codex）</td>
+          <td>$8/20/200/月</td>
+          <td>$20以上才支持Codex，根据使用模型不同，可使用次数不同，<strong>$20对个人基本够用</strong></td>
+          <td>OpenAI最新模型（包含Sora）</td>
+          <td>额度多，但付款难，封号易。</td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 class="relative group">推荐
+    <div id="推荐" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%8e%a8%e8%8d%90" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>国内：<strong>阿里云、腾讯云、百度智能云</strong>都可以，京东暂时避坑，火山不行。模型厂商的套餐只有单模型支持，不推荐。</p>
+<p>国外：<strong>Kiro、GPT Codex、Copilot</strong>。（如果你能搞定付款的话）三方号容易出问题。</p>
+<blockquote><p>联通云、移动云等厂商也有Coding Plan，但我没用过，网上反馈也较少，所以就不推荐了。其实国内还有一家叫UCloud的云计算厂商提供了Coding Plan服务，除了国内模型，还偷摸接了Claude和GPT，但积分及其不耐用，也不推荐了。</p>
+</blockquote>
+        </div>
+      </div>
+
+      
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+        
+          <a href="/tutorial/2026/01/use-tailwind-in-react-native/" class="macaron-card bottom-nav flex flex-col gap-1">
+            <span class="text-xs text-page-muted">&larr; 上一篇</span>
+            <span class="font-medium text-sm line-clamp-2 text-accent">在React Native中使用Tailwind CSS</span>
+          </a>
+        
+        
+      </div>
+      
+
+      
+      
+    </div>
+  </div>
+</article>
+
+<script>
+(function(){
+  
+  document.querySelectorAll('.article-content pre').forEach(function(pre){
+    if (pre.querySelector('.code-copy-btn')) return;
+    var btn = document.createElement('button');
+    btn.className = 'code-copy-btn';
+    btn.textContent = '复制';
+    btn.type = 'button';
+    btn.addEventListener('click', function(){
+      var code = pre.querySelector('code');
+      var text = code ? code.textContent : pre.textContent;
+      navigator.clipboard.writeText(text).then(function(){
+        btn.textContent = '已复制';
+        btn.classList.add('copied');
+        setTimeout(function(){ btn.textContent = '复制'; btn.classList.remove('copied'); }, 1500);
+      });
+    });
+    pre.style.position = 'relative';
+    pre.appendChild(btn);
+  });
+
+  
+  var tocToggle = document.getElementById('mobile-toc-toggle');
+  var tocContent = document.getElementById('mobile-toc-content');
+  var tocArrow = document.getElementById('mobile-toc-arrow');
+  if (tocToggle && tocContent) {
+    tocToggle.addEventListener('click', function(){
+      tocContent.classList.toggle('hidden');
+      if (tocArrow) tocArrow.style.transform = tocContent.classList.contains('hidden') ? '' : 'rotate(180deg)';
+    });
+  }
+
+  
+  var tocSidebar = document.getElementById('toc-sidebar');
+  var tocFull = document.getElementById('toc-drawer-full');
+  var tocMini = document.getElementById('toc-drawer-mini');
+  var tocMiniBars = document.getElementById('toc-mini-bars');
+  var tocCollapseBtn = document.getElementById('toc-collapse-btn');
+  var tocExpandBtn = document.getElementById('toc-expand-btn');
+  
+  if (tocSidebar && tocFull && tocMini) {
+    
+    var tocFullNav = document.getElementById('toc-full-nav');
+    var tocLinks = tocFullNav ? tocFullNav.querySelectorAll('a') : [];
+    var headings = [];
+    tocLinks.forEach(function(link){
+      var href = link.getAttribute('href');
+      if (href && href.indexOf('#') !== -1) {
+        var id = decodeURIComponent(href.split('#').pop());
+        var el = document.getElementById(id);
+        if (el) headings.push({el:el, link:link, text:link.textContent.trim()});
+      }
+    });
+
+    
+    if (tocMiniBars && headings.length > 0) {
+      headings.forEach(function(h, i){
+        var wrap = document.createElement('div');
+        wrap.className = 'toc-mini-item';
+        
+        var bar = document.createElement('div');
+        bar.className = 'toc-mini-bar';
+        bar.setAttribute('data-index', i);
+        
+        
+        var tip = document.createElement('div');
+        tip.className = 'toc-mini-tip';
+        tip.textContent = h.text;
+        bar.appendChild(tip);
+        
+        wrap.appendChild(bar);
+        
+        
+        wrap.addEventListener('click', function(){
+          h.el.scrollIntoView({behavior:'smooth', block:'start'});
+          document.querySelectorAll('.toc-mini-item').forEach(function(b){ b.classList.remove('active'); });
+          wrap.classList.add('active');
+        });
+        
+        tocMiniBars.appendChild(wrap);
+      });
+    }
+
+    
+    function updateMiniBars() {
+      if (tocMini.classList.contains('hidden')) return;
+      var items = tocMiniBars.querySelectorAll('.toc-mini-item');
+      var scrollY = window.scrollY + 120;
+      var activeIdx = -1;
+      for (var i = 0; i < headings.length; i++) {
+        if (headings[i].el.getBoundingClientRect().top + window.scrollY <= scrollY) activeIdx = i;
+      }
+      items.forEach(function(b){ b.classList.remove('active'); });
+      if (activeIdx >= 0 && items[activeIdx]) items[activeIdx].classList.add('active');
+    }
+
+    
+    var scrollLock = false;
+    var scrollTimer = null;
+    function updateFullToc() {
+      if (scrollLock || tocFull.classList.contains('hidden')) return;
+      var scrollY = window.scrollY + 120;
+      var activeIdx = -1;
+      for (var i = 0; i < headings.length; i++) {
+        if (headings[i].el.getBoundingClientRect().top + window.scrollY <= scrollY) activeIdx = i;
+      }
+      tocLinks.forEach(function(l){ l.classList.remove('active'); });
+      if (activeIdx >= 0) headings[activeIdx].link.classList.add('active');
+    }
+    
+    tocLinks.forEach(function(link){
+      link.addEventListener('click', function(){
+        tocLinks.forEach(function(l){ l.classList.remove('active'); });
+        link.classList.add('active');
+        scrollLock = true;
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(function(){ scrollLock = false; }, 800);
+      });
+    });
+
+    
+    window.addEventListener('scroll', function(){
+      updateMiniBars();
+      updateFullToc();
+    }, {passive:true});
+
+    
+    function collapseToc() {
+      
+      var fullHeight = tocFull.offsetHeight;
+      tocFull.classList.add('hidden');
+      tocMini.classList.remove('hidden');
+      
+      if (tocMiniBars) tocMiniBars.style.height = (fullHeight - 24) + 'px';
+      tocSidebar.classList.add('toc-sidebar-collapsed');
+      localStorage.setItem('toc-collapsed', 'true');
+      updateMiniBars();
+    }
+    function expandToc() {
+      tocMini.classList.add('hidden');
+      tocFull.classList.remove('hidden');
+      tocSidebar.classList.remove('toc-sidebar-collapsed');
+      localStorage.setItem('toc-collapsed', 'false');
+      updateFullToc();
+    }
+    
+    if (tocCollapseBtn) tocCollapseBtn.addEventListener('click', collapseToc);
+    if (tocExpandBtn) tocExpandBtn.addEventListener('click', expandToc);
+
+    
+    if (localStorage.getItem('toc-collapsed') === 'true') {
+      collapseToc();
+    }
+  }
+
+  
+  document.querySelectorAll('.code-tabs').forEach(function(wrapper){
+    var tabs = wrapper.querySelectorAll('.code-tab-btn');
+    var panels = wrapper.querySelectorAll('.code-tab-panel');
+    tabs.forEach(function(tab, i){
+      tab.addEventListener('click', function(){
+        tabs.forEach(function(t){ t.classList.remove('active'); });
+        panels.forEach(function(p){ p.classList.add('hidden'); });
+        tab.classList.add('active');
+        if(panels[i]) panels[i].classList.remove('hidden');
+      });
+    });
+  });
+
+  
+  document.querySelectorAll('.macaron-toc-nav').forEach(function(nav){
+    var tocLinks = nav.querySelectorAll('a');
+    if (tocLinks.length === 0) return;
+    var headings = [];
+    tocLinks.forEach(function(link){
+      var href = link.getAttribute('href');
+      if (href && href.indexOf('#') !== -1) {
+        var id = decodeURIComponent(href.split('#').pop());
+        var el = document.getElementById(id);
+        if (el) headings.push({el:el, link:link});
+      }
+    });
+    if (headings.length === 0) return;
+
+    var scrollLock = false;
+    var scrollTimer = null;
+
+    
+    tocLinks.forEach(function(link){
+      link.addEventListener('click', function(){
+        tocLinks.forEach(function(l){ l.classList.remove('active'); });
+        link.classList.add('active');
+        scrollLock = true;
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(function(){ scrollLock = false; }, 800);
+      });
+    });
+
+    function updateToc() {
+      if (scrollLock) return;
+      var scrollY = window.scrollY + 120;
+      var activeIdx = -1;
+      for (var i = 0; i < headings.length; i++) {
+        if (headings[i].el.getBoundingClientRect().top + window.scrollY <= scrollY) activeIdx = i;
+      }
+      tocLinks.forEach(function(l){ l.classList.remove('active'); });
+      if (activeIdx >= 0) headings[activeIdx].link.classList.add('active');
+    }
+    var ticking = false;
+    window.addEventListener('scroll', function(){
+      if (scrollLock || ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function(){ updateToc(); ticking = false; });
+    }, {passive:true});
+    updateToc();
+  });
+})();
+</script>
+</main>
+
+    <footer class="mt-auto py-8">
+  <div class="mx-auto max-w-5xl px-4">
+    <div class="text-center">
+      <div class="text-sm text-page-muted">
+        
+          <p>&copy; 2022 - 2026 limou</p>
+        
+      </div>
+      
+        <div class="mt-2 text-xs text-page-muted" style="opacity:.5">
+          Powered by <a href="https://gohugo.io" class="text-accent" target="_blank" rel="noopener noreferrer">Hugo</a> &middot; Macaron Theme
+        </div>
+      
+    </div>
+  </div>
+</footer>
+ 
+<div class="theme-picker">
+  <button type="button" id="theme-picker-btn" class="theme-picker-btn" aria-label="选择配色">
+    <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
+      <path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10a2.5 2.5 0 002.5-2.5c0-.61-.23-1.2-.64-1.67a.53.53 0 01-.14-.33c0-.28.22-.5.5-.5H16c3.31 0 6-2.69 6-6 0-4.96-4.49-9-10-9zm-5.5 9a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm3-4a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm5 0a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm3 4a1.5 1.5 0 110-3 1.5 1.5 0 010 3z"/>
+    </svg>
+  </button>
+  <div id="theme-picker-panel" class="theme-picker-panel">
+    <div class="theme-picker-title">选择配色</div>
+    <div class="theme-option active" data-theme="strawberry-matcha">
+      <span class="theme-dot" style="background:linear-gradient(135deg,#ad1457,#43a047)"></span>
+      <span>草莓×抹茶</span>
+    </div>
+    <div class="theme-option" data-theme="matcha-strawberry">
+      <span class="theme-dot" style="background:linear-gradient(135deg,#1b5e20,#ec407a)"></span>
+      <span>抹茶×草莓</span>
+    </div>
+    <div class="theme-option" data-theme="taro-mango">
+      <span class="theme-dot" style="background:linear-gradient(135deg,#7b1fa2,#fb8c00)"></span>
+      <span>香芋×芒果</span>
+    </div>
+    <div class="theme-option" data-theme="mango-taro">
+      <span class="theme-dot" style="background:linear-gradient(135deg,#e65100,#ab47bc)"></span>
+      <span>芒果×香芋</span>
+    </div>
+    <div class="theme-option" data-theme="blueberry-peach">
+      <span class="theme-dot" style="background:linear-gradient(135deg,#1565c0,#f4511e)"></span>
+      <span>蓝莓×蜜桃</span>
+    </div>
+    <div class="theme-option" data-theme="peach-blueberry">
+      <span class="theme-dot" style="background:linear-gradient(135deg,#bf360c,#1e88e5)"></span>
+      <span>蜜桃×蓝莓</span>
+    </div>
+  </div>
+</div>
+
+
+    
+    <button
+      type="button"
+      id="scroll-top-btn"
+      class="scroll-top-btn"
+      aria-label="回到顶部"
+    >
+      <svg
+        class="h-5 w-5 text-accent"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2.5"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M5 15l7-7 7 7"
+        />
+      </svg>
+    </button>
+
+     
+<div id="search-wrapper" class="invisible fixed inset-0 flex items-start justify-center pt-[15vh] z-[999]"
+     style="background:rgba(0,0,0,.3); backdrop-filter:blur(8px);">
+  <div id="search-modal" class="w-full max-w-2xl mx-4 rounded-2xl overflow-hidden frosted-glass">
+    <div class="p-4">
+      <div class="flex items-center gap-3">
+        <svg class="h-5 w-5 flex-shrink-0 text-page-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+        <input type="search" id="search-query" 
+               class="flex-grow bg-transparent outline-none text-lg text-page placeholder:text-page-muted"
+               placeholder="搜索文章..." autocomplete="off">
+        <button type="button" id="close-search-button" 
+                class="p-1 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition-colors cursor-pointer text-page-muted">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="search-results" class="max-h-[50vh] overflow-y-auto px-4 pb-4"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var input = document.getElementById('search-query');
+  var resultsEl = document.getElementById('search-results');
+  var data = null;
+  var fuse = null;
+
+  
+  function loadIndex(){
+    if (data) return Promise.resolve();
+    return fetch('/index.json').then(function(r){ return r.json(); }).then(function(d){
+      data = d;
+      if (typeof Fuse !== 'undefined'){
+        fuse = new Fuse(d, {
+          keys: [{name:'title',weight:2},{name:'content'},{name:'tags'},{name:'categories'}],
+          threshold: 0.3,
+          ignoreLocation: true
+        });
+      }
+    }).catch(function(){});
+  }
+
+  
+  function doSearch(q){
+    if (!q || !data) { resultsEl.innerHTML = ''; return; }
+    var matches;
+    if (fuse) {
+      matches = fuse.search(q).slice(0,10);
+    } else {
+      var lower = q.toLowerCase();
+      matches = data.filter(function(item){
+        return (item.title && item.title.toLowerCase().indexOf(lower) !== -1) ||
+               (item.content && item.content.toLowerCase().indexOf(lower) !== -1);
+      }).slice(0,10).map(function(item){ return {item:item}; });
+    }
+    if (matches.length === 0) {
+      resultsEl.innerHTML = '<p class="text-page-muted text-center py-8">未找到相关结果</p>';
+      return;
+    }
+    var html = '';
+    for (var i=0; i<matches.length; i++){
+      var item = matches[i].item || matches[i];
+      html += '<a href="'+(item.permalink||'#')+'" class="block p-3 rounded-xl hover:bg-black/5 dark:hover:bg-white/10 transition-colors">'
+            + '<div class="font-semibold text-accent">'+(item.title||'')+'</div>'
+            + '<div class="text-sm text-page-muted mt-1 line-clamp-2">'+(item.summary||'')+'</div>'
+            + '</a>';
+    }
+    resultsEl.innerHTML = html;
+  }
+
+  if (input) {
+    
+    var fuseScript = document.createElement('script');
+    fuseScript.src = 'https://cdn.bootcdn.net/ajax/libs/fuse.js/7.0.0/fuse.min.js';
+    fuseScript.onload = function(){ loadIndex(); };
+    document.head.appendChild(fuseScript);
+
+    input.addEventListener('input', function(){
+      clearTimeout(input._timer);
+      input._timer = setTimeout(function(){ doSearch(input.value.trim()); }, 200);
+    });
+    input.addEventListener('focus', function(){ loadIndex(); });
+  }
+})();
+</script>
+ 
+
+    <script>
+      (function () {
+        var html = document.documentElement;
+
+        
+        var picker = document.getElementById("theme-picker-panel");
+        var pickerBtn = document.getElementById("theme-picker-btn");
+        if (pickerBtn && picker) {
+          pickerBtn.onclick = function (e) {
+            e.stopPropagation();
+            picker.classList.toggle("open");
+          };
+          document.addEventListener("click", function (e) {
+            if (!e.target.closest(".theme-picker"))
+              picker.classList.remove("open");
+          });
+        }
+        function applyTheme(t) {
+          html.setAttribute("data-theme", t);
+          localStorage.setItem("macaron-theme", t);
+          var opts = document.querySelectorAll(".theme-option");
+          for (var i = 0; i < opts.length; i++) {
+            if (opts[i].dataset.theme === t) opts[i].classList.add("active");
+            else opts[i].classList.remove("active");
+          }
+        }
+        var themeOpts = document.querySelectorAll(".theme-option");
+        for (var i = 0; i < themeOpts.length; i++) {
+          (function (opt) {
+            opt.onclick = function () {
+              applyTheme(opt.dataset.theme);
+            };
+          })(themeOpts[i]);
+        }
+        applyTheme(localStorage.getItem("macaron-theme") || "blueberry-peach");
+
+        
+        var saved = localStorage.getItem("appearance");
+        if (
+          saved === "dark" ||
+          (!saved && window.matchMedia("(prefers-color-scheme:dark)").matches)
+        ) {
+          html.classList.add("dark");
+        }
+        function toggleDark() {
+          html.classList.toggle("dark");
+          localStorage.setItem(
+            "appearance",
+            html.classList.contains("dark") ? "dark" : "light",
+          );
+        }
+        var btn1 = document.getElementById("appearance-switcher");
+        var btn2 = document.getElementById("appearance-switcher-mobile");
+        if (btn1) btn1.onclick = toggleDark;
+        if (btn2) btn2.onclick = toggleDark;
+
+        
+        var menuToggle = document.getElementById("mobile-menu-toggle");
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (menuToggle && mobileMenu) {
+          menuToggle.onclick = function () {
+            mobileMenu.classList.toggle("hidden");
+          };
+        }
+
+        
+        var ddBtn = document.getElementById("nav-dropdown-btn");
+        var ddMenu = document.getElementById("nav-dropdown");
+        var ddArrow = document.getElementById("nav-dropdown-arrow");
+        if (ddBtn && ddMenu) {
+          ddBtn.onclick = function (e) {
+            e.stopPropagation();
+            ddMenu.classList.toggle("hidden");
+            if (ddArrow)
+              ddArrow.style.transform = ddMenu.classList.contains("hidden")
+                ? ""
+                : "rotate(180deg)";
+          };
+          document.addEventListener("click", function (e) {
+            if (!e.target.closest("#nav-dropdown-wrap")) {
+              ddMenu.classList.add("hidden");
+              if (ddArrow) ddArrow.style.transform = "";
+            }
+          });
+        }
+
+        
+        function openSearch() {
+          var w = document.getElementById("search-wrapper");
+          var inp = document.getElementById("search-query");
+          if (w) {
+            w.classList.remove("invisible");
+            if (inp)
+              setTimeout(function () {
+                inp.focus();
+              }, 100);
+          }
+        }
+        var searchBtn = document.getElementById("search-button");
+        var searchBtnMobile = document.getElementById("search-button-mobile");
+        var searchWrapper = document.getElementById("search-wrapper");
+        var closeSearchBtn = document.getElementById("close-search-button");
+        if (searchBtn) searchBtn.onclick = openSearch;
+        if (searchBtnMobile) searchBtnMobile.onclick = openSearch;
+        if (closeSearchBtn && searchWrapper) {
+          closeSearchBtn.onclick = function () {
+            searchWrapper.classList.add("invisible");
+          };
+        }
+        if (searchWrapper) {
+          searchWrapper.onclick = function (e) {
+            if (e.target === searchWrapper)
+              searchWrapper.classList.add("invisible");
+          };
+        }
+        document.addEventListener("keydown", function (e) {
+          if (
+            e.key === "Escape" &&
+            searchWrapper &&
+            !searchWrapper.classList.contains("invisible")
+          ) {
+            searchWrapper.classList.add("invisible");
+          }
+        });
+
+        
+        var lastScrollForMenu = 0;
+        window.addEventListener(
+          "scroll",
+          function () {
+            var diff = Math.abs(window.scrollY - lastScrollForMenu);
+            if (diff > 50) {
+              
+              var ddMenu = document.getElementById("nav-dropdown");
+              var ddArrow = document.getElementById("nav-dropdown-arrow");
+              if (ddMenu && !ddMenu.classList.contains("hidden")) {
+                ddMenu.classList.add("hidden");
+                if (ddArrow) ddArrow.style.transform = "";
+              }
+              
+              if (picker) picker.classList.remove("open");
+              lastScrollForMenu = window.scrollY;
+            }
+          },
+          { passive: true }
+        );
+
+        
+        var scrollBtn = document.getElementById("scroll-top-btn");
+        if (scrollBtn) {
+          window.addEventListener(
+            "scroll",
+            function () {
+              if (window.scrollY > 400) scrollBtn.classList.add("visible");
+              else scrollBtn.classList.remove("visible");
+            },
+            { passive: true },
+          );
+          scrollBtn.onclick = function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          };
+        }
+
+        
+        var header = document.querySelector(".macaron-header");
+        if (header) {
+          var lastScroll = 0;
+          var ticking = false;
+          window.addEventListener(
+            "scroll",
+            function () {
+              if (!ticking) {
+                window.requestAnimationFrame(function () {
+                  var cur = window.scrollY;
+                  
+                  if (cur < 60) {
+                    header.classList.remove("header-hidden", "header-shadow");
+                  } else {
+                    
+                    header.classList.add("header-shadow");
+                    
+                    if (cur > lastScroll + 8) {
+                      header.classList.add("header-hidden");
+                    } else if (cur < lastScroll - 8) {
+                      header.classList.remove("header-hidden");
+                    }
+                  }
+                  lastScroll = cur;
+                  ticking = false;
+                });
+                ticking = true;
+              }
+            },
+            { passive: true },
+          );
+        }
+      })();
+    </script>
+  </body>
+</html>

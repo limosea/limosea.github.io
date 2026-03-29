@@ -1,0 +1,16 @@
+<footer class="mt-auto py-8">
+  <div class="mx-auto max-w-5xl px-4">
+    <div class="text-center">
+      <div class="text-sm text-page-muted">
+        {{ if site.Params.footer.showCopyright | default true }}
+          <p>&copy; 2022 - {{ now.Year }} limou</p>
+        {{ end }}
+      </div>
+      {{ if site.Params.footer.showThemeAttribution | default true }}
+        <div class="mt-2 text-xs text-page-muted" style="opacity:.5">
+          Powered by <a href="https://gohugo.io" class="text-accent" target="_blank" rel="noopener noreferrer">Hugo</a> &middot; Macaron Theme
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</footer>

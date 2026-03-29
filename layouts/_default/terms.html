@@ -1,32 +1,42 @@
 {{ define "main" }}
-  <header>
-    {{ if .Params.showBreadcrumbs | default (.Site.Params.article.showBreadcrumbs | default false) }}
-      {{ partial "breadcrumbs.html" . }}
-    {{ end }}
-    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+<div class="mx-auto max-w-5xl px-4 py-8">
+  <!-- 页面标题 -->
+  <div class="macaron-card article-card-static mb-8">
+    <h1 class="text-2xl sm:text-3xl font-bold text-page">
       {{ if eq .Data.Plural "tags" }}文章标签
       {{ else if eq .Data.Plural "categories" }}文章分类
-      {{ else if eq .Data.Plural "posts" }}博客列表
-      {{ else if eq .Data.Plural "tutorials" }}技术教程
       {{ else }}{{ .Title }}{{ end }}
     </h1>
-  </header>
-  
-  <section class="flex flex-wrap mt-6">
-    {{ if gt (len .Data.Terms) 0 }}
+    <p class="mt-2 text-page-muted text-sm">共 {{ len .Data.Terms }} 个</p>
+  </div>
+
+  <!-- 标签/分类列表 -->
+  {{ if gt (len .Data.Terms) 0 }}
+    <div class="flex flex-wrap gap-3">
       {{ range .Data.Terms.ByCount }}
-        {{ $tagName := .Page.Title }}
-        {{ $tagCount := .Count }}
-        <a href="{{ .Page.RelPermalink }}" 
-           class="mr-2 mb-2 px-3 py-1 text-sm font-medium rounded-md border border-neutral-200 bg-neutral-100 text-neutral-700 hover:border-primary-300 hover:text-primary-600 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:border-primary-600 dark:hover:text-primary-400">
-          {{ $tagName }}
-          <span class="ml-1 text-neutral-400 dark:text-neutral-500">{{ $tagCount }}</span>
-        </a>
+        {{ $name := .Page.Title }}
+        {{ $count := .Count }}
+        {{ $slug := $name | urlize }}
+        
+        {{ if eq $.Data.Plural "tags" }}
+          <a href="{{ .Page.RelPermalink }}" 
+             class="macaron-card article-card-static inline-flex items-center gap-2 px-4 py-2.5 text-sm">
+            <span class="tag">#{{ $name }}</span>
+            <span class="text-xs text-page-muted">{{ $count }}</span>
+          </a>
+        {{ else }}
+          <a href="{{ .Page.RelPermalink }}" 
+             class="macaron-card article-card-static inline-flex items-center gap-2 px-4 py-2.5 text-sm">
+            <span class="category-badge">{{ $name }}</span>
+            <span class="text-xs text-page-muted">{{ $count }}</span>
+          </a>
+        {{ end }}
       {{ end }}
-    {{ else }}
-      <div class="py-10 text-neutral-500">
-        {{ i18n "list.no_articles" | default "没有找到内容" }}
-      </div>
-    {{ end }}
-  </section>
+    </div>
+  {{ else }}
+    <div class="macaron-card article-card-static text-center py-12 text-page-muted">
+      暂无内容
+    </div>
+  {{ end }}
+</div>
 {{ end }}

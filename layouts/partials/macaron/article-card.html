@@ -1,0 +1,38 @@
+{{ $disableImageOptimization := .Site.Params.disableImageOptimization | default false }}
+<a href="{{ .RelPermalink }}" class="macaron-card article-card-static flex flex-col">
+  <!-- 分类 -->
+  {{ with .Params.categories }}
+    <div class="mb-2 flex flex-wrap gap-1.5">
+      {{ range . }}
+        <span class="category-badge text-[0.65rem]">{{ . }}</span>
+      {{ end }}
+    </div>
+  {{ end }}
+  
+  <!-- 标题 -->
+  <h2 class="text-base font-bold text-page line-clamp-2 mb-2">{{ .Title }}</h2>
+  
+  <!-- 摘要 -->
+  {{ with .Summary }}
+    <p class="text-xs text-page-muted line-clamp-2 mb-auto">{{ . | plainify | truncate 80 }}</p>
+  {{ end }}
+  
+  <!-- 底部 -->
+  <div class="flex items-center justify-between mt-3 pt-2 border-t" style="border-color:rgba(0,0,0,.06)">
+    <div class="flex items-center gap-3">
+      {{ with .Date }}
+        <time class="text-xs text-page-muted">{{ .Format "2006-01-02" }}</time>
+      {{ end }}
+      {{ if .Params.showReadingTime | default (site.Params.article.showReadingTime | default true) }}
+        <span class="text-xs text-page-muted">{{ .ReadingTime }}分钟</span>
+      {{ end }}
+    </div>
+    {{ with .Params.tags }}
+      <div class="flex gap-1">
+        {{ range first 1 . }}
+          <span class="tag text-[0.65rem]">#{{ . }}</span>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</a>

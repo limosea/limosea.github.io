@@ -1,0 +1,63 @@
+{{ $recent := .Site.Params.homepage.showRecentItems | default 6 }}
+{{ $posts := first $recent (where .Site.RegularPages "Type" "in" (site.Params.mainSections | default (slice "posts"))) }}
+
+{{ if $posts }}
+<section class="mx-auto max-w-5xl px-4 py-12">
+  <div class="flex items-center justify-between mb-8">
+    <h2 class="text-2xl font-bold text-accent">最近文章</h2>
+    {{ if .Site.Params.homepage.showMoreLink | default false }}
+      <a href="{{ .Site.Params.homepage.showMoreLinkDest | default `/posts` }}"
+         class="text-accent font-medium hover:opacity-70 transition-opacity flex items-center gap-1">
+        查看全部 <span>&rarr;</span>
+      </a>
+    {{ end }}
+  </div>
+
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {{ range $posts }}
+      <article class="macaron-card">
+        <!-- 分类 -->
+        {{ with .Params.categories }}
+          <div class="mb-3 flex flex-wrap gap-2">
+            {{ range . }}
+              {{ $slug := . | urlize }}
+              <a href="{{ "categories/" | absURL }}{{ $slug }}/" 
+                 class="category-badge hover:opacity-80 transition-opacity">{{ . }}</a>
+            {{ end }}
+          </div>
+        {{ end }}
+
+        <!-- 标题 -->
+        <h3 class="text-lg font-bold mb-2 line-clamp-2 leading-snug">
+          <a href="{{ .RelPermalink }}" class="hover:opacity-70 transition-opacity">{{ .Title }}</a>
+        </h3>
+
+        <!-- 摘要 -->
+        {{ with .Summary }}
+          <p class="text-sm opacity-70 line-clamp-2 mb-4 leading-relaxed">
+            {{ . | plainify | truncate 120 }}
+          </p>
+        {{ end }}
+
+        <!-- 底部 -->
+        <div class="flex items-center justify-between mt-auto pt-3 border-t border-current/10">
+          {{ with .Date }}
+            <time datetime="{{ .Format "2006-01-02" }}" class="text-xs font-medium opacity-60">
+              {{ .Format "2006年01月02日" }}
+            </time>
+          {{ end }}
+          {{ with .Params.tags }}
+            <div class="flex flex-wrap gap-1 justify-end">
+              {{ range first 2 . }}
+                {{ $slug := . | urlize }}
+                <a href="{{ "tags/" | absURL }}{{ $slug }}/" 
+                   class="tag hover:opacity-80">#{{ . }}</a>
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

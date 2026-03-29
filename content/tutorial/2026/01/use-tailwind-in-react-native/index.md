@@ -17,92 +17,64 @@ NativeWind是一个用于React Native的Tailwind CSS工具，它可以将Tailwin
 > 如果你是新项目，或者刚开始的项目，那么我强烈建议你使用 [expo](https://docs.expo.dev/get-started/create-a-project/) 创建一个新项目，在expo中你可以回到熟悉的nextjs（基于文件目录的路由）。
 
 ### 创建项目
-{{< tabs >}}
-    {{< tab label="npm" >}}
-
-    ```bash
-        npx rn-new@next --nativewind
-    ```
-    {{< /tab >}}
-
-    {{< tab label="yarn" >}}
-    ```bash
-        yarn dlx rn-new@next --nativewind
-    ```
-    {{< /tab >}}
-
-    {{< tab label="pnpm" >}}
-    ```bash
-        pnpx rn-new@next --nativewind
-    ```
-    {{< /tab >}}
-
-{{< /tabs >}}
+ {{< codetabs >}}
+  ---npm---
+  ```bash
+npx rn-new@next --nativewind
+  ```
+  ---yarn---
+  ```bash
+yarn dlx rn-new@next --nativewind
+  ```
+  ---pnpm---
+  ```bash
+pnpx rn-new@next --nativewind
+   ```
+  {{< /codetabs >}}
 
 > 如果你是老项目，需要安装并逐步配置
 ### 安装NativeWind
 注意看[最新版本](https://www.nativewind.dev/docs/getting-started/installation#1-install-nativewind)，当前为NativeWind v5
 <br/>
 如果已安装[安装expo-cli](https://docs.expo.dev/more/expo-cli/#installation),尽量使用expo安装
-{{< tabs >}}
-
-    {{< tab label="expo" >}}
-
-    ```bash
-    npx expo install nativewind@preview react-native-css react-native-reanimated react-native-safe-area-context
-    ```
-    {{< /tab >}}
-
-    {{< tab label="npm" >}}
-    ```bash
-    npm install nativewind@preview react-native-css react-native-reanimated react-native-safe-area-context
-    ```
-    {{< /tab >}}
-
-    {{< tab label="yarn" >}}
-    ```bash
-    yarn add nativewind@preview react-native-css react-native-reanimated react-native-safe-area-context
-    ```
-    {{< /tab >}}
-
-    {{< tab label="pnpm" >}}
-    ```bash
-    pnpm install nativewind@preview react-native-css react-native-reanimated react-native-safe-area-context
-    ```
-    {{< /tab >}}
-
-{{< /tabs >}}
+ {{< codetabs >}}
+  ---expo---
+  ```bash
+npx expo install nativewind@preview react-native-css react-native-reanimated react-native-safe-area-context
+  ```
+  ---npm---
+  ```bash
+npm install nativewind@preview react-native-css react-native-reanimated react-native-safe-area-context
+  ```
+  ---yarn---
+  ```bash
+yarn add nativewind@preview react-native-css react-native-reanimated react-native-safe-area-context
+  ```
+  ---pnpm---
+  ```bash
+pnpm install nativewind@preview react-native-css react-native-reanimated react-native-safe-area-context
+  ```
+  {{< /codetabs >}}
 
 ### 安装Tailwind CSS
-
-{{< tabs >}}
-
-    {{< tab label="expo" >}}
-
-    ```bash
-    npx expo install --dev tailwindcss @tailwindcss/postcss postcss
-    ```
-    {{< /tab >}}
-
-    {{< tab label="npm" >}}
-    ```bash
-    npm install --dev tailwindcss @tailwindcss/postcss postcss
-    ```
-    {{< /tab >}}
-
-    {{< tab label="yarn" >}}
-    ```bash
-    yarn add --dev tailwindcss @tailwindcss/postcss postcss
-    ```
-    {{< /tab >}}
-
-    {{< tab label="pnpm" >}}
-    ```bash
-    pnpm install --save-dev tailwindcss @tailwindcss/postcss postcss
-    ```
-    {{< /tab >}}
-
-{{< /tabs >}}
+ {{< codetabs >}}
+  ---expo---
+  ```bash
+npx expo install --dev tailwindcss @tailwindcss/postcss postcss
+  ```
+  ---npm---
+  ```bash
+npm install --dev tailwindcss @tailwindcss/postcss postcss
+  ```
+  ---yarn---
+  ```bash
+yarn add --dev tailwindcss @tailwindcss/postcss postcss
+  ```
+  ---pnpm---
+  ```bash
+pnpm install --save-dev tailwindcss @tailwindcss/postcss postcss
+  ```
+  {{< /codetabs >}}
 
 安装完成后，在项目根目录创建postcss.config.mjs文件，并添加以下内容：
 ```typescript
@@ -147,54 +119,46 @@ export default App() {
 ```
 ### 覆盖lightningcss版本（必须做，否则运行会报错）
 官网做法基本正确，但偶有概率报错，所以根据自己项目的react、react-dom、react-native-css版本，添加几项锁定，如下：
-{{< tabs >}}
-
-    {{< tab label="npm" >}}
-
-    ```json
-    //package.json
-    {
-      "overrides": {
-        "react": "19.1.0",
-        "react-dom": "19.1.0",
-        "react-native-css": "3.0.1",
-        "lightningcss": "1.30.1"
-      }
+ {{< codetabs >}}
+  ---npm---
+  ```json
+//package.json
+{
+  "overrides": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-native-css": "3.0.1",
+    "lightningcss": "1.30.1"
+  }
 }
-    ```
-    {{< /tab >}}
-
-    {{< tab label="yarn" >}}
-    ```bash
-    //package.json
-    {
-      "resolutions": {
-        "react": "19.1.0",
-        "react-dom": "19.1.0",
-        "react-native-css": "3.0.1",
-        "lightningcss": "1.30.1"
-      }
+  ```
+  ---yarn---
+  ```json
+//package.json
+{
+  "resolutions": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-native-css": "3.0.1",
+    "lightningcss": "1.30.1"
+  }
 }
-    ```
-    {{< /tab >}}
-
-    {{< tab label="pnpm" >}}
-    ```bash
-    //package.json
-    {
-      "pnpm": {
-        "overrides": {
-          "react": "19.1.0",
-          "react-dom": "19.1.0",
-          "react-native-css": "3.0.1",
-          "lightningcss": "1.30.1"
-        }
-      }
+  ```
+  ---pnpm---
+  ```json
+//package.json
+{
+  "pnpm": {
+    "overrides": {
+      "react": "19.1.0",
+      "react-dom": "19.1.0",
+      "react-native-css": "3.0.1",
+      "lightningcss": "1.30.1"
+    }
+  }
 }
-    ```
-    {{< /tab >}}
-
-{{< /tabs >}}
+  ```
+  {{< /codetabs >}}
 
 ### 添加TypeScript支持
 项目根目录创建文件nativewind-env.d.ts，添加以下内容：

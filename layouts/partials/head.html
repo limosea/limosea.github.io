@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+{{ with .Site.Language.Params.htmlCode | default .Site.LanguageCode }}
+  <meta http-equiv="content-language" content="{{ . }}">
+{{ end }}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="theme-color" content="#fdf6f0">
+
+{{ if .IsHome }}
+  <title>{{ .Site.Title | emojify }}</title>
+  <meta name="title" content="{{ .Site.Title | emojify }}">
+{{ else }}
+  <title>{{ .Title | emojify }} · {{ .Site.Title | emojify }}</title>
+  <meta name="title" content="{{ .Title | emojify }} · {{ .Site.Title | emojify }}">
+{{ end }}
+
+{{ with (.Params.Summary | default .Params.Description) | default .Site.Params.description }}
+  <meta name="description" content="{{ . }}">
+{{ end }}
+{{ with .Params.Tags | default .Site.Params.keywords }}
+  <meta name="keywords" content="{{ range . }}{{ . }},{{ end }}">
+{{ end }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{ range .AlternativeOutputFormats }}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink ($.Site.Title | emojify) | safeHTML }}
+{{ end }}
+
+{{ with .Site.Params.Author.name }}
+  <meta name="author" content="{{ . }}">
+{{ end }}
+
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title | emojify }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title | emojify }}{{ else }}{{ .Title | emojify }}{{ end }}">
+{{ with .Site.LanguageCode }}<meta property="og:locale" content="{{ . }}">{{ end }}
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title | emojify }}{{ else }}{{ .Title | emojify }}{{ end }}">
+
+<link rel="icon" href="{{ "favicon.svg" | absURL }}">
+
+{{ if .IsHome }}
+  {{ with .Site.Params.Author.name }}
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebSite","@id":"{{ $.Permalink }}","name":"{{ $.Site.Title | emojify }}","url":"{{ $.Permalink }}"}
+    </script>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,53 @@
+{{ define "main" }}
+<div class="mx-auto max-w-5xl px-4 py-8">
+  <!-- 页面标题 -->
+  <div class="macaron-card article-card-static mb-8">
+    <div class="flex items-center gap-3">
+      {{ if eq .Data.Singular "tag" }}
+        <span class="tag text-base">#{{ .Title }}</span>
+      {{ else if eq .Data.Singular "category" }}
+        <span class="category-badge text-base">{{ .Title }}</span>
+      {{ else }}
+        <h1 class="text-2xl font-bold text-page">{{ .Title }}</h1>
+      {{ end }}
+      <span class="text-sm text-page-muted">共 {{ len .Pages }} 篇文章</span>
+    </div>
+    {{ with .Content }}
+      <div class="mt-4 text-page-muted text-sm leading-relaxed">{{ . }}</div>
+    {{ end }}
+  </div>
+
+  <!-- 文章列表 -->
+  {{ if gt (len .Pages) 0 }}
+    {{ $groupByYear := site.Params.term.groupByYear | default site.Params.list.groupByYear | default false }}
+    
+    {{ if $groupByYear }}
+      {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
+        <div class="mb-8">
+          <h2 class="text-lg font-bold text-accent mb-4">{{ .Key }}</h2>
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {{ range .Pages }}
+              {{ partial "macaron/article-card.html" . }}
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    {{ else }}
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {{ range (.Paginate .Pages).Pages }}
+          {{ partial "macaron/article-card.html" . }}
+        {{ end }}
+      </div>
+    {{ end }}
+
+    <!-- 分页 -->
+    <div class="mt-8">
+      {{ partial "pagination.html" . }}
+    </div>
+  {{ else }}
+    <div class="macaron-card article-card-static text-center py-12 text-page-muted">
+      暂无文章
+    </div>
+  {{ end }}
+</div>
+{{ end }}

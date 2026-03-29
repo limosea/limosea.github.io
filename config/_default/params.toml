@@ -1,4 +1,4 @@
-colorScheme = "one-light"
+colorScheme = "macaron"
 defaultAppearance = "light"
 autoSwitchAppearance = true
 enableSearch = true
@@ -8,14 +8,14 @@ firebase = { }
 fathomAnalytics = { }
 verification = { }
 highlightCurrentMenuArea = true
-defaultBackgroundImage = "img/background.png"
 smartTOC = true
 logo = "img/logo-64x64.png"
+favicon = "favicon.svg"
 title = "Limou's Site"
 dateFormat = "2006年01月02日"
 
 [header]
-layout = "background"
+layout = "basic"
 
 [footer]
 showCopyright = true
@@ -24,7 +24,7 @@ showAppearanceSwitcher = true
 showScrollToTop = true
 
 [homepage]
-layout = "background"
+layout = "macaron"
 showRecent = true
 showRecentItems = 6
 showMoreLink = true
@@ -32,16 +32,13 @@ showMoreLinkDest = "/tutorial"
 showTaxonomies = true
 cardView = true
 cardViewScreenWidth = false
-layoutBackgroundBlur = true
-homepageImage = "img/background.png"
 
 [article]
 showNextPrev = true
 showDate = true
 showDateUpdated = false
 showAuthor = true
-showHero = true
-heroStyle = "background"
+showHero = false
 showBreadcrumbs = true
 showDraftLabel = true
 showEdit = false
@@ -62,8 +59,7 @@ showBreadcrumbs = false
 showSummary = true
 showTableOfContents = false
 showCards = false
-showHero = true
-heroStyle = "background"
+showHero = false
 groupByYear = true
 cardView = false
 cardViewScreenWidth = false
@@ -74,12 +70,10 @@ excludedKinds = [ ]
 
 [taxonomy]
 showTermCount = true
-showHero = true
-heroStyle = "background"
+showHero = false
 
 [term]
-showHero = true
-heroStyle = "background"
+showHero = false
 
 [comments]
     provider = "disqus"

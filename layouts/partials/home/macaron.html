@@ -1,0 +1,68 @@
+{{ $disableImageOptimization := .Site.Params.disableImageOptimization | default false }}
+
+<article class="py-16 sm:py-24">
+  <div class="mx-auto max-w-5xl px-4">
+    <!-- 个人资料区 -->
+    <div class="flex flex-col items-center text-center mb-12">
+      {{ with .Site.Params.Author.image }}
+        {{ $authorImage := "" }}
+        {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+          {{ $authorImage = resources.GetRemote . }}
+        {{ else }}
+          {{ $authorImage = resources.Get . }}
+        {{ end }}
+        {{ if $authorImage }}
+          {{ $final := $authorImage }}
+          {{ if not (or $disableImageOptimization (eq $authorImage.MediaType.SubType "svg")) }}
+            {{ $final = $authorImage.Fill (print "200x200 q" ( $.Site.Params.Author.imagequality | default "96" )) }}
+          {{ end }}
+          <div class="relative mb-6">
+            <div class="absolute inset-0 rounded-full blur-2xl opacity-40 scale-125 bg-accent"></div>
+            <img class="relative h-28 w-28 rounded-2xl shadow-xl object-cover" width="112" height="112"
+                 alt="{{ $.Site.Params.Author.name | default `Author` }}" src="{{ $final.RelPermalink }}">
+          </div>
+        {{ end }}
+      {{ end }}
+      
+      <h1 class="mb-2 text-4xl font-bold sm:text-5xl text-accent">
+        {{ .Site.Params.Author.name | default .Site.Title }}
+      </h1>
+      
+      {{ with .Site.Params.Author.headline }}
+        <h2 class="mt-0 mb-3 text-xl font-normal text-accent" style="opacity:.75">{{ . | markdownify }}</h2>
+      {{ end }}
+      
+      {{ with .Site.Params.Author.bio }}
+        <p class="max-w-lg mb-6 text-page-muted">{{ . }}</p>
+      {{ end }}
+      
+      <!-- 社交链接 -->
+      {{ with .Site.Params.Author.links }}
+        <div class="flex flex-wrap justify-center gap-2">
+          {{ range $links := . }}
+            {{ range $name, $url := $links }}
+              <a href="{{ $url }}" target="_blank" rel="me noopener noreferrer"
+                 aria-label="{{ $name | title }}" title="{{ $name | title }}"
+                 class="frosted-glass px-4 py-2 rounded-xl text-sm font-medium text-accent hover:scale-105 transition-transform flex items-center gap-2">
+                {{ partial "icon.html" $name }}
+                <span>{{ $name | title }}</span>
+              </a>
+            {{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+    
+    <!-- 简介内容 -->
+    {{ if .Content }}
+      <div class="mx-auto max-w-3xl mb-12">
+        <section class="macaron-card prose" style="max-width:100%">
+          {{ .Content }}
+        </section>
+      </div>
+    {{ end }}
+  </div>
+</article>
+
+<!-- 最近文章 -->
+{{ partial "macaron/recent-articles.html" . }}

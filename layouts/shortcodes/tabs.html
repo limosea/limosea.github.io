@@ -1,0 +1,26 @@
+{{/*
+  tabs shortcode - 多标签代码块
+  用法:
+  {{< tabs >}}
+  {{< tab "JavaScript" >}}
+  ```js
+  console.log('hello');
+  ```
+  {{< /tab >}}
+  {{< tab "Python" >}}
+  ```python
+  print('hello')
+  ```
+  {{< /tab >}}
+  {{< /tabs >}}
+*/}}
+<div class="code-tabs">
+  <div class="code-tabs-header">
+    {{ $idx := 0 }}
+    {{ range .Get "titles" | default (slice) }}
+      <button class="code-tab-btn{{ if eq $idx 0 }} active{{ end }}" type="button">{{ . }}</button>
+      {{ $idx = add $idx 1 }}
+    {{ end }}
+  </div>
+  {{ .Inner }}
+</div>
