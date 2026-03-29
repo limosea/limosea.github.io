@@ -296,9 +296,35 @@
         background: #f8f5f0 !important;
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
+        transition: opacity 0.2s ease, transform 0.2s ease;
       }
       html.dark #nav-dropdown {
         background: #1e1828 !important;
+      }
+      #nav-dropdown.dropdown-hidden {
+        opacity: 0;
+        transform: translateY(-8px);
+        pointer-events: none;
+      }
+      #nav-dropdown.dropdown-visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      /* 移动端菜单动画 */
+      #mobile-menu {
+        transition: opacity 0.25s ease, transform 0.25s ease, max-height 0.3s ease;
+        overflow: hidden;
+      }
+      #mobile-menu.menu-hidden {
+        opacity: 0;
+        max-height: 0;
+        transform: translateY(-10px);
+      }
+      #mobile-menu.menu-visible {
+        opacity: 1;
+        max-height: 500px;
+        transform: translateY(0);
       }
 
       /* ===== 马卡龙卡片 ===== */
@@ -380,6 +406,18 @@
         letter-spacing: 0.04em;
         background: var(--cat-bg);
         color: var(--cat-text);
+      }
+
+      .category-page-badge { 
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.4rem 1rem;
+        border-radius: 0.75rem;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        color: var(--cat-bg);
       }
 
       /* ===== 头部（沉浸式） ===== */
@@ -549,7 +587,7 @@
         border-radius: 50%;
         background: var(--glass-bg);
         backdrop-filter: blur(16px);
-        border: 1.5px solid rgba(0, 0, 0, 0.12);
+        border: 1.5px solid rgba(0, 0, 0, 0.32);
         box-shadow: 0 4px 16px var(--glass-shadow);
         display: flex;
         align-items: center;
@@ -660,7 +698,13 @@
         overflow-x: auto;
         font-size: 0.85rem;
         line-height: 1.6;
-        position: relative;
+      }
+      /* 被包裹的 pre 不需要单独的背景和边距 */
+      .code-block-wrap .article-body .article-content pre,
+      .article-body .article-content .code-block-wrap pre {
+        background: transparent;
+        margin: 0;
+        border-radius: 0;
       }
       html.dark .article-body .article-content pre {
         background: #1a1820;
@@ -793,21 +837,57 @@
         color: #fff !important;
       }
 
+      /* 代码块包裹容器 */
+      .code-block-wrap {
+        position: relative;
+        margin: 1.2em 0;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        background: #2d2a33;
+      }
+      html.dark .code-block-wrap {
+        background: #1a1820;
+      }
+      /* 代码块顶栏 */
+      .code-block-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.4rem 0.8rem;
+        background: rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        font-size: 0.72rem;
+      }
+      .code-block-lang {
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
       /* 代码块复制按钮 */
       .code-copy-btn {
-        position: absolute;
-        top: 0.6rem;
-        right: 0.6rem;
-        padding: 0.25rem 0.6rem;
-        border-radius: 0.35rem;
-        font-size: 0.72rem;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.3rem;
+        font-size: 0.7rem;
         font-weight: 500;
-        background: rgba(255, 255, 255, 0.12);
-        color: rgba(255, 255, 255, 0.6);
+        background: rgba(255, 255, 255, 0.08);
+        color: rgba(255, 255, 255, 0.5);
         border: none;
         cursor: pointer;
         transition: all 0.2s;
-        z-index: 2;
+      }
+      .code-copy-btn:hover {
+        background: rgba(255, 255, 255, 0.15);
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .code-copy-btn.copied {
+        background: var(--cat-bg);
+        color: #fff;
+      }
+      .code-block-wrap pre {
+        margin: 0;
+        border-radius: 0;
+        background: transparent !important;
       }
       .code-copy-btn:hover {
         background: rgba(255, 255, 255, 0.2);
@@ -874,6 +954,9 @@
       .toc-sidebar {
         width: 14rem;
         transition: width 0.3s ease;
+        position: relative;
+        z-index: 50;
+        isolation: isolate;
       }
       .toc-sidebar.toc-sidebar-collapsed {
         width: 2rem;
@@ -913,41 +996,42 @@
         width: 14px;
         height: 5px;
         border-radius: 2.5px;
-        background: var(--card-bg);
+        background: #a09098;
         transition: all 0.2s;
+      }
+      html.dark .toc-mini-bar {
+        background: #6a5a65;
       }
       /* 悬浮提示 */
       .toc-mini-tip {
-        position: absolute;
-        left: 22px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: var(--card-bg);
-        color: var(--card-text);
-        padding: 4px 10px;
-        border-radius: 6px;
-        font-size: 0.75rem;
-        font-weight: 500;
+        position: fixed;
+        left: 50px;
+        background: #f5f2ed;
+        color: #2a2025;
+        padding: 6px 14px;
+        border-radius: 8px;
+        font-size: 0.78rem;
+        font-weight: 600;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-width: 180px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        max-width: 220px;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.1);
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
         transition: all 0.15s;
-        z-index: 10;
+        z-index: 9999;
+        border: 1px solid rgba(0,0,0,0.08);
+      }
+      html.dark .toc-mini-tip {
+        background: #221a2e;
+        color: #e0d8e4;
+        border-color: rgba(255,255,255,0.1);
       }
       .toc-mini-item:hover .toc-mini-tip {
         opacity: 1;
         visibility: visible;
-      }
-      html.dark .toc-mini-bar {
-        background: #3a3045;
-      }
-      html.dark .toc-mini-tip {
-        color: #2a2025;
       }
 
       /* ===== 多标签代码块 ===== */
@@ -1102,35 +1186,94 @@
         if (btn1) btn1.onclick = toggleDark;
         if (btn2) btn2.onclick = toggleDark;
 
-        // --- 移动菜单 ---
+        // --- 移动菜单（带动画） ---
         var menuToggle = document.getElementById("mobile-menu-toggle");
         var mobileMenu = document.getElementById("mobile-menu");
+        var menuIconOpen = document.getElementById("menu-icon-open");
+        var menuIconClose = document.getElementById("menu-icon-close");
+        
+        function closeMobileMenu() {
+          if (!mobileMenu) return;
+          mobileMenu.classList.remove("menu-visible");
+          mobileMenu.classList.add("menu-hidden");
+          if (menuIconOpen) menuIconOpen.classList.remove("hidden");
+          if (menuIconClose) menuIconClose.classList.add("hidden");
+          setTimeout(function(){ mobileMenu.classList.add("hidden"); }, 250);
+        }
+        function openMobileMenu() {
+          if (!mobileMenu) return;
+          mobileMenu.classList.remove("hidden", "menu-hidden");
+          mobileMenu.classList.add("menu-visible");
+          if (menuIconOpen) menuIconOpen.classList.add("hidden");
+          if (menuIconClose) menuIconClose.classList.remove("hidden");
+        }
         if (menuToggle && mobileMenu) {
-          menuToggle.onclick = function () {
-            mobileMenu.classList.toggle("hidden");
+          menuToggle.onclick = function (e) {
+            e.stopPropagation();
+            if (mobileMenu.classList.contains("hidden") || mobileMenu.classList.contains("menu-hidden")) {
+              openMobileMenu();
+            } else {
+              closeMobileMenu();
+            }
           };
         }
+        // 点击菜单外关闭
+        document.addEventListener("click", function (e) {
+          if (mobileMenu && !mobileMenu.classList.contains("hidden") && 
+              !e.target.closest("#mobile-menu") && !e.target.closest("#mobile-menu-toggle")) {
+            closeMobileMenu();
+          }
+        });
 
-        // --- 桌面下拉菜单 ---
+        // --- 桌面下拉菜单（hover 打开，鼠标离开关闭） ---
+        var ddWrap = document.getElementById("nav-dropdown-wrap");
         var ddBtn = document.getElementById("nav-dropdown-btn");
         var ddMenu = document.getElementById("nav-dropdown");
         var ddArrow = document.getElementById("nav-dropdown-arrow");
-        if (ddBtn && ddMenu) {
-          ddBtn.onclick = function (e) {
+        
+        function openDropdown() {
+          if (!ddMenu) return;
+          ddMenu.classList.remove("hidden", "dropdown-hidden");
+          ddMenu.classList.add("dropdown-visible");
+          if (ddArrow) ddArrow.style.transform = "rotate(180deg)";
+        }
+        function closeDropdown() {
+          if (!ddMenu) return;
+          ddMenu.classList.remove("dropdown-visible");
+          ddMenu.classList.add("dropdown-hidden");
+          if (ddArrow) ddArrow.style.transform = "";
+          setTimeout(function(){ 
+            if (ddMenu.classList.contains("dropdown-hidden")) {
+              ddMenu.classList.add("hidden"); 
+            }
+          }, 200);
+        }
+        
+        if (ddWrap && ddMenu) {
+          // hover 整个区域（按钮+菜单）打开/关闭
+          ddWrap.addEventListener("mouseenter", function(){
+            clearTimeout(ddWrap._closeTimer);
+            openDropdown();
+          });
+          ddWrap.addEventListener("mouseleave", function(){
+            ddWrap._closeTimer = setTimeout(closeDropdown, 150);
+          });
+          // 点击也切换（兼容触摸设备）
+          ddBtn && ddBtn.addEventListener("click", function(e){
             e.stopPropagation();
-            ddMenu.classList.toggle("hidden");
-            if (ddArrow)
-              ddArrow.style.transform = ddMenu.classList.contains("hidden")
-                ? ""
-                : "rotate(180deg)";
-          };
-          document.addEventListener("click", function (e) {
-            if (!e.target.closest("#nav-dropdown-wrap")) {
-              ddMenu.classList.add("hidden");
-              if (ddArrow) ddArrow.style.transform = "";
+            if (ddMenu.classList.contains("hidden") || ddMenu.classList.contains("dropdown-hidden")) {
+              openDropdown();
+            } else {
+              closeDropdown();
             }
           });
         }
+        // 点击外部关闭
+        document.addEventListener("click", function (e) {
+          if (!e.target.closest("#nav-dropdown-wrap")) {
+            closeDropdown();
+          }
+        });
 
         // --- 搜索 ---
         function openSearch() {
@@ -1171,22 +1314,23 @@
           }
         });
 
-        // --- 滚动时自动收起菜单 ---
+        // --- 滚动时自动收起菜单（鼠标在菜单栏上时不收起） ---
         var lastScrollForMenu = 0;
+        var mouseOverHeader = false;
+        var headerEl = document.querySelector(".macaron-header");
+        if (headerEl) {
+          headerEl.addEventListener("mouseenter", function(){ mouseOverHeader = true; });
+          headerEl.addEventListener("mouseleave", function(){ mouseOverHeader = false; });
+        }
         window.addEventListener(
           "scroll",
           function () {
+            if (mouseOverHeader) return; // 鼠标在菜单栏上时不收起
             var diff = Math.abs(window.scrollY - lastScrollForMenu);
             if (diff > 50) {
-              // 收起下拉菜单
-              var ddMenu = document.getElementById("nav-dropdown");
-              var ddArrow = document.getElementById("nav-dropdown-arrow");
-              if (ddMenu && !ddMenu.classList.contains("hidden")) {
-                ddMenu.classList.add("hidden");
-                if (ddArrow) ddArrow.style.transform = "";
-              }
-              // 收起配色选择器
+              closeDropdown();
               if (picker) picker.classList.remove("open");
+              closeMobileMenu();
               lastScrollForMenu = window.scrollY;
             }
           },
@@ -1209,11 +1353,13 @@
           };
         }
 
-        // --- 沉浸式头部 ---
+        // --- 沉浸式头部（鼠标在菜单栏上时始终吸顶） ---
         var header = document.querySelector(".macaron-header");
         if (header) {
           var lastScroll = 0;
           var ticking = false;
+          header.addEventListener("mouseenter", function(){ mouseOverHeader = true; });
+          header.addEventListener("mouseleave", function(){ mouseOverHeader = false; });
           window.addEventListener(
             "scroll",
             function () {
@@ -1226,11 +1372,16 @@
                   } else {
                     // 添加阴影
                     header.classList.add("header-shadow");
-                    // 向下滚动隐藏，向上滚动显示
-                    if (cur > lastScroll + 8) {
-                      header.classList.add("header-hidden");
-                    } else if (cur < lastScroll - 8) {
+                    // 鼠标在菜单栏上时不隐藏
+                    if (mouseOverHeader) {
                       header.classList.remove("header-hidden");
+                    } else {
+                      // 向下滚动隐藏，向上滚动显示
+                      if (cur > lastScroll + 8) {
+                        header.classList.add("header-hidden");
+                      } else if (cur < lastScroll - 8) {
+                        header.classList.remove("header-hidden");
+                      }
                     }
                   }
                   lastScroll = cur;

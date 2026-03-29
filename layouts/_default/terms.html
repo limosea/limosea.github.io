@@ -22,13 +22,13 @@
           <a href="{{ .Page.RelPermalink }}" 
              class="macaron-card article-card-static inline-flex items-center gap-2 px-4 py-2.5 text-sm">
             <span class="tag">#{{ $name }}</span>
-            <span class="text-xs text-page-muted">{{ $count }}</span>
+            <span class="text-base font-bold text-page-muted">{{ $count }}</span>
           </a>
         {{ else }}
           <a href="{{ .Page.RelPermalink }}" 
              class="macaron-card article-card-static inline-flex items-center gap-2 px-4 py-2.5 text-sm">
-            <span class="category-badge">{{ $name }}</span>
-            <span class="text-xs text-page-muted">{{ $count }}</span>
+            <span class="category-page-badge">{{ $name }}</span>
+            <span class="text-base font-bold text-page-muted">{{ $count }}</span>
           </a>
         {{ end }}
       {{ end }}

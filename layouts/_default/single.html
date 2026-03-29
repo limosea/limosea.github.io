@@ -179,24 +179,61 @@
 
 <script>
 (function(){
-  // 代码块复制按钮
+  // 代码块：包裹 + 顶栏（语言标签 + 复制按钮）
   document.querySelectorAll('.article-content pre').forEach(function(pre){
-    if (pre.querySelector('.code-copy-btn')) return;
+    if (pre.closest('.code-block-wrap')) return;
+    
+    // 检测语言
+    var lang = '';
+    var codeEl = pre.querySelector('code');
+    if (codeEl) {
+      var classes = codeEl.className.split(' ');
+      for (var i = 0; i < classes.length; i++) {
+        if (classes[i].indexOf('language-') === 0) {
+          lang = classes[i].replace('language-', '');
+          break;
+        }
+      }
+    }
+    // 语言显示名映射
+    var langNames = {js:'JavaScript', jsx:'JSX', ts:'TypeScript', tsx:'TSX', py:'Python', 
+      rb:'Ruby', go:'Go', rs:'Rust', java:'Java', cpp:'C++', c:'C', cs:'C#',
+      html:'HTML', css:'CSS', scss:'SCSS', bash:'Bash', sh:'Shell',
+      json:'JSON', yaml:'YAML', toml:'TOML', md:'Markdown', sql:'SQL'};
+    var langDisplay = langNames[lang] || lang;
+    
+    // 创建包裹容器
+    var wrap = document.createElement('div');
+    wrap.className = 'code-block-wrap';
+    pre.parentNode.insertBefore(wrap, pre);
+    
+    // 创建顶栏
+    var header = document.createElement('div');
+    header.className = 'code-block-header';
+    
+    // 语言标签
+    var langSpan = document.createElement('span');
+    langSpan.className = 'code-block-lang';
+    langSpan.textContent = langDisplay || 'Code';
+    header.appendChild(langSpan);
+    
+    // 复制按钮
     var btn = document.createElement('button');
     btn.className = 'code-copy-btn';
     btn.textContent = '复制';
     btn.type = 'button';
     btn.addEventListener('click', function(){
-      var code = pre.querySelector('code');
-      var text = code ? code.textContent : pre.textContent;
+      var text = codeEl ? codeEl.textContent : pre.textContent;
       navigator.clipboard.writeText(text).then(function(){
         btn.textContent = '已复制';
         btn.classList.add('copied');
         setTimeout(function(){ btn.textContent = '复制'; btn.classList.remove('copied'); }, 1500);
       });
     });
-    pre.style.position = 'relative';
-    pre.appendChild(btn);
+    header.appendChild(btn);
+    
+    wrap.appendChild(header);
+    wrap.appendChild(pre);
   });
 
   // 移动端目录折叠
@@ -233,6 +270,12 @@
     });
 
     // 生成迷你条（每个条包一个容器，扩大点击区域）
+    // 创建一个全局 tooltip 元素
+    var globalTip = document.createElement('div');
+    globalTip.className = 'toc-mini-tip';
+    document.body.appendChild(globalTip);
+    var tipHideTimer = null;
+
     if (tocMiniBars && headings.length > 0) {
       headings.forEach(function(h, i){
         var wrap = document.createElement('div');
@@ -242,13 +285,23 @@
         bar.className = 'toc-mini-bar';
         bar.setAttribute('data-index', i);
         
-        // 单行截断的 tooltip
-        var tip = document.createElement('div');
-        tip.className = 'toc-mini-tip';
-        tip.textContent = h.text;
-        bar.appendChild(tip);
-        
         wrap.appendChild(bar);
+        
+        // hover 显示全局 tooltip
+        wrap.addEventListener('mouseenter', function(){
+          clearTimeout(tipHideTimer);
+          var rect = wrap.getBoundingClientRect();
+          globalTip.textContent = h.text;
+          globalTip.style.top = (rect.top + rect.height / 2 - 14) + 'px';
+          globalTip.style.opacity = '1';
+          globalTip.style.visibility = 'visible';
+        });
+        wrap.addEventListener('mouseleave', function(){
+          tipHideTimer = setTimeout(function(){
+            globalTip.style.opacity = '0';
+            globalTip.style.visibility = 'hidden';
+          }, 100);
+        });
         
         // 点击跳转（点击容器任意位置）
         wrap.addEventListener('click', function(){
